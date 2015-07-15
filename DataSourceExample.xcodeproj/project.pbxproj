@@ -14,14 +14,10 @@
 		022B10171B2F2FC400DD4DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022B10161B2F2FC400DD4DCD /* Images.xcassets */; };
 		022B101A1B2F2FC400DD4DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B10181B2F2FC400DD4DCD /* LaunchScreen.xib */; };
 		022B10401B2F42DC00DD4DCD /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103C1B2F42DC00DD4DCD /* Box.framework */; };
-		022B10411B2F42DC00DD4DCD /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103D1B2F42DC00DD4DCD /* DataSource.framework */; };
 		022B10421B2F42DC00DD4DCD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103E1B2F42DC00DD4DCD /* ReactiveCocoa.framework */; };
-		022B10431B2F42DC00DD4DCD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103F1B2F42DC00DD4DCD /* Result.framework */; };
-		022B10441B2F437300DD4DCD /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103C1B2F42DC00DD4DCD /* Box.framework */; };
 		022B10451B2F437300DD4DCD /* Box.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103C1B2F42DC00DD4DCD /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		022B10461B2F437400DD4DCD /* DataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103D1B2F42DC00DD4DCD /* DataSource.framework */; };
 		022B10471B2F437400DD4DCD /* DataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103D1B2F42DC00DD4DCD /* DataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		022B10481B2F437400DD4DCD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103E1B2F42DC00DD4DCD /* ReactiveCocoa.framework */; };
 		022B10491B2F437400DD4DCD /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103E1B2F42DC00DD4DCD /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		022B104A1B2F437400DD4DCD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103F1B2F42DC00DD4DCD /* Result.framework */; };
 		022B104B1B2F437400DD4DCD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103F1B2F42DC00DD4DCD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,12 +62,8 @@
 			files = (
 				022B10401B2F42DC00DD4DCD /* Box.framework in Frameworks */,
 				022B10461B2F437400DD4DCD /* DataSource.framework in Frameworks */,
-				022B10411B2F42DC00DD4DCD /* DataSource.framework in Frameworks */,
 				022B104A1B2F437400DD4DCD /* Result.framework in Frameworks */,
 				022B10421B2F42DC00DD4DCD /* ReactiveCocoa.framework in Frameworks */,
-				022B10481B2F437400DD4DCD /* ReactiveCocoa.framework in Frameworks */,
-				022B10441B2F437300DD4DCD /* Box.framework in Frameworks */,
-				022B10431B2F42DC00DD4DCD /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +139,7 @@
 		022B10001B2F2FC400DD4DCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Fueled;
 				TargetAttributes = {
 					022B10071B2F2FC400DD4DCD = {
