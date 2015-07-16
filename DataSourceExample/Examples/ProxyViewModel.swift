@@ -38,6 +38,7 @@ final class ProxyViewModel: ExampleViewModel {
     static func randomTitle() -> String {
         let nf = NSNumberFormatter()
         nf.numberStyle = .SpellOutStyle
+        nf.formattingContext = .Standalone
         let i = arc4random_uniform(1000)
         return nf.stringFromNumber(NSNumber(unsignedInt: i))!
     }
