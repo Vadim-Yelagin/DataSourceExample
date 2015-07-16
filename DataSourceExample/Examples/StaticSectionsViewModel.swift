@@ -38,4 +38,8 @@ final class StaticSectionsViewModel: ExampleViewModel {
             ])
         ])
     
+    var actions: [ExampleViewModelAction] {
+        return []
+    }
+    
 }

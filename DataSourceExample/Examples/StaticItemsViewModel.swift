@@ -19,4 +19,8 @@ final class StaticItemsViewModel: ExampleViewModel {
         ExampleItem("Three")
     ])
     
+    var actions: [ExampleViewModelAction] {
+        return []
+    }
+    
 }

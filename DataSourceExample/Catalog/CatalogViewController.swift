@@ -19,8 +19,9 @@ class CatalogViewController: UIViewController {
         super.awakeFromNib()
         let staticItems = CatalogItem(title: "Static (items)") { StaticItemsViewModel() }
         let staticSections = CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() }
+        let proxy = CatalogItem(title: "Proxy") { ProxyViewModel() }
         self.dataSource.dataSource.innerDataSource.value = StaticDataSource(
-            items: [staticItems, staticSections])
+            items: [staticItems, staticSections, proxy])
     }
     
     override func viewDidLoad() {

@@ -20,6 +20,9 @@ class ExampleViewController: UIViewController {
             if let viewModel = self.viewModel {
                 self.navigationItem.title = viewModel.title
                 self.dataSource.dataSource.innerDataSource.value = viewModel.dataSource
+                self.navigationItem.rightBarButtonItems = viewModel.actions.map {
+                    $0.barButtonItem()
+                }
             }
         }
     }
