@@ -12,6 +12,13 @@ import DataSource
 class ExampleViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var dataSource: TableViewDataSource?
+    
+    let dataSource = TableViewDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.dataSource.tableView = self.tableView
+        self.tableView?.dataSource = self.dataSource
+    }
 
 }

@@ -12,13 +12,20 @@ import DataSource
 class CatalogViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var dataSource: TableViewDataSource?
+    
+    let dataSource = TableViewDataSource()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         let one = CatalogItem(title: "one")
         let two = CatalogItem(title: "two")
-        self.dataSource?.dataSource.innerDataSource.value = StaticDataSource(items: [one, two])
+        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [one, two])
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.dataSource.tableView = self.tableView
+        self.tableView?.dataSource = self.dataSource
     }
     
     override func viewWillAppear(animated: Bool) {
