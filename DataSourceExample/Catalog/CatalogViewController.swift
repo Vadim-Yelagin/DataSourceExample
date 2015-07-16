@@ -17,12 +17,12 @@ class CatalogViewController: UIViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let staticItems = CatalogItem(title: "Static (items)") { StaticItemsViewModel() }
-        let staticSections = CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() }
-        let proxy = CatalogItem(title: "Proxy") { ProxyViewModel() }
-        let autoDiff = CatalogItem(title: "Auto Diff") { AutoDiffViewModel() }
-        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(
-            items: [staticItems, staticSections, proxy, autoDiff])
+        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [
+            CatalogItem(title: "Static (items)") { StaticItemsViewModel() },
+            CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() },
+            CatalogItem(title: "Proxy") { ProxyViewModel() },
+            CatalogItem(title: "Auto Diff") { AutoDiffViewModel() }
+        ])
     }
     
     override func viewDidLoad() {
