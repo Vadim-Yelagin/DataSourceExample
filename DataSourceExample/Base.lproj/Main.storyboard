@@ -37,7 +37,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-vz-3y2">
-                                            <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                            <rect key="frame" x="8" y="12" width="584" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="wAu-vz-3y2" secondAttribute="trailing" id="D8I-B5-8qY"/>
-                                        <constraint firstItem="wAu-vz-3y2" firstAttribute="top" secondItem="jWE-MP-ag0" secondAttribute="topMargin" id="Fga-lw-ggL"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="wAu-vz-3y2" secondAttribute="bottom" id="ufx-Cr-4H1"/>
+                                        <constraint firstItem="wAu-vz-3y2" firstAttribute="top" secondItem="jWE-MP-ag0" secondAttribute="topMargin" constant="4" id="Fga-lw-ggL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wAu-vz-3y2" secondAttribute="bottom" constant="4" id="ufx-Cr-4H1"/>
                                         <constraint firstItem="wAu-vz-3y2" firstAttribute="leading" secondItem="jWE-MP-ag0" secondAttribute="leadingMargin" id="yxM-zX-Bnj"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -103,16 +103,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aN-7E-p4n">
-                                            <rect key="frame" x="8" y="8" width="551" height="27"/>
+                                            <rect key="frame" x="8" y="12" width="551" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="4aN-7E-p4n" secondAttribute="bottom" id="3f8-d4-8TS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4aN-7E-p4n" secondAttribute="bottom" constant="4" id="3f8-d4-8TS"/>
                                         <constraint firstItem="4aN-7E-p4n" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="Y0I-H0-qjK"/>
-                                        <constraint firstItem="4aN-7E-p4n" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="a7f-B2-12K"/>
+                                        <constraint firstItem="4aN-7E-p4n" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="4" id="a7f-B2-12K"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4aN-7E-p4n" secondAttribute="trailing" id="jH3-zh-8ft"/>
                                     </constraints>
                                 </tableViewCellContentView>
