@@ -23,9 +23,9 @@ final class CompositeViewModel: ExampleViewModel {
     }()
     
     lazy var actions: [ExampleViewModelAction] = {
-        return [ExampleViewModelAction(title: "R1") {
+        return [ExampleViewModelAction(title: "Random 1") {
                 [weak self] in self?.random1()
-            }, ExampleViewModelAction(title: "R2") {
+            }, ExampleViewModelAction(title: "Random 2") {
                 [weak self] in self?.random2()
             }]
     }()

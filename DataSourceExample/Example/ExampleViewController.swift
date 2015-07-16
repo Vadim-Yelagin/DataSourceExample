@@ -9,6 +9,10 @@
 import UIKit
 import DataSource
 
+private func space() -> UIBarButtonItem {
+    return UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+}
+
 class ExampleViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView?
@@ -20,9 +24,9 @@ class ExampleViewController: UIViewController {
             if let viewModel = self.viewModel {
                 self.navigationItem.title = viewModel.title
                 self.dataSource.dataSource.innerDataSource.value = viewModel.dataSource
-                self.navigationItem.rightBarButtonItems = viewModel.actions.map {
-                    $0.barButtonItem()
-                }
+                self.toolbarItems = viewModel.actions.flatMap {
+                    [space(), $0.barButtonItem()]
+                } + [space()]
             }
         }
     }
