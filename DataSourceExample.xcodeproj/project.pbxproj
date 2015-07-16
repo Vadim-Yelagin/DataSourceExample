@@ -33,6 +33,7 @@
 		02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */; };
 		02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB3C501B57E33B00CF5A35 /* ProxyViewModel.swift */; };
 		02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */; };
+		02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C01B57FC7C00D2F5AD /* RandomData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +78,7 @@
 		02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticSectionsViewModel.swift; sourceTree = "<group>"; };
 		02AB3C501B57E33B00CF5A35 /* ProxyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyViewModel.swift; sourceTree = "<group>"; };
 		02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelAction.swift; sourceTree = "<group>"; };
+		02FE33C01B57FC7C00D2F5AD /* RandomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				024943451B57D731009110DE /* RACExtensions.swift */,
+				02FE33C01B57FC7C00D2F5AD /* RandomData.swift */,
 				024943491B57D7D4009110DE /* SplitHackDelegate.swift */,
 				024943461B57D731009110DE /* UIExtensions.swift */,
 			);
@@ -265,6 +268,7 @@
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
 				028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */,
+				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,

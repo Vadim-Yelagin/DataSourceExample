@@ -26,39 +26,13 @@ final class ProxyViewModel: ExampleViewModel {
     }()
     
     let proxyDataSource: ProxyDataSource = {
-        let result = ProxyDataSource(ProxyViewModel.randomDataSource())
+        let result = ProxyDataSource(RandomData.dataSource())
         result.animatesChanges.value = true
         return result
     }()
     
     func random() {
-        self.proxyDataSource.innerDataSource.value = ProxyViewModel.randomDataSource()
-    }
-    
-    static func randomTitle() -> String {
-        let nf = NSNumberFormatter()
-        nf.numberStyle = .SpellOutStyle
-        nf.formattingContext = .Standalone
-        let i = arc4random_uniform(1000)
-        return nf.stringFromNumber(NSNumber(unsignedInt: i))!
-    }
-    
-    static func randomSection() -> StaticDataSourceSection<ExampleItem> {
-        let n = 1 + arc4random_uniform(5)
-        let items = (0 ..< n).map { _ in
-            ExampleItem(self.randomTitle())
-        }
-        let title = self.randomTitle()
-        return StaticDataSourceSection(items: items,
-            supplementaryItems: [UICollectionElementKindSectionHeader: title])
-    }
-    
-    static func randomDataSource() -> StaticDataSource<ExampleItem> {
-        let n = 1 + arc4random_uniform(5)
-        let sections = (0 ..< n).map { _ in
-            self.randomSection()
-        }
-        return StaticDataSource(sections: sections)
+        self.proxyDataSource.innerDataSource.value = RandomData.dataSource()
     }
     
 }
