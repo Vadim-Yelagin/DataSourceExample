@@ -21,7 +21,8 @@
 		022B104B1B2F437400DD4DCD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022B103F1B2F42DC00DD4DCD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249433B1B57CBAD009110DE /* ExampleViewModel.swift */; };
 		024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943401B57CE23009110DE /* StaticItemsViewModel.swift */; };
-		028F5EFE1B57C3B50079FBFE /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5EFD1B57C3B50079FBFE /* UIExtensions.swift */; };
+		024943471B57D731009110DE /* RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943451B57D731009110DE /* RACExtensions.swift */; };
+		024943481B57D731009110DE /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943461B57D731009110DE /* UIExtensions.swift */; };
 		028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F001B57C4910079FBFE /* CatalogCell.swift */; };
 		028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F011B57C4910079FBFE /* CatalogItem.swift */; };
 		028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F021B57C4910079FBFE /* CatalogViewController.swift */; };
@@ -60,7 +61,8 @@
 		022B103F1B2F42DC00DD4DCD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		0249433B1B57CBAD009110DE /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		024943401B57CE23009110DE /* StaticItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticItemsViewModel.swift; sourceTree = "<group>"; };
-		028F5EFD1B57C3B50079FBFE /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		024943451B57D731009110DE /* RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACExtensions.swift; sourceTree = "<group>"; };
+		024943461B57D731009110DE /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		028F5F001B57C4910079FBFE /* CatalogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		028F5F011B57C4910079FBFE /* CatalogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
 		028F5F021B57C4910079FBFE /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
@@ -108,11 +110,11 @@
 				028F5EFF1B57C4910079FBFE /* Catalog */,
 				028F5F0A1B57C76A0079FBFE /* Example */,
 				0249433F1B57CE14009110DE /* Examples */,
+				024943441B57D731009110DE /* Helpers */,
 				022B10161B2F2FC400DD4DCD /* Images.xcassets */,
 				022B10181B2F2FC400DD4DCD /* LaunchScreen.xib */,
 				022B10131B2F2FC400DD4DCD /* Main.storyboard */,
 				022B100B1B2F2FC400DD4DCD /* Supporting Files */,
-				028F5EFD1B57C3B50079FBFE /* UIExtensions.swift */,
 			);
 			path = DataSourceExample;
 			sourceTree = "<group>";
@@ -131,6 +133,15 @@
 				024943401B57CE23009110DE /* StaticItemsViewModel.swift */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		024943441B57D731009110DE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				024943451B57D731009110DE /* RACExtensions.swift */,
+				024943461B57D731009110DE /* UIExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		028F5EF81B57BDC30079FBFE /* Frameworks */ = {
@@ -238,8 +249,9 @@
 			files = (
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
-				028F5EFE1B57C3B50079FBFE /* UIExtensions.swift in Sources */,
+				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
 				028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */,
+				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,

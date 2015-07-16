@@ -8,17 +8,19 @@
 
 import UIKit
 import DataSource
+import ReactiveCocoa
 
 class ExampleCell: TableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.item.producer.start(next: {
-            [weak self] item in
-            if let this = self, item = item as? ExampleItem {
-                this.textLabel?.text = item.title
-            }
-        })
+        self.item.producer
+            |> filterMap(cast)
+            |> start(self, ExampleCell.configureWithItem)
+    }
+    
+    func configureWithItem(item: CatalogItem) {
+        self.textLabel?.text = item.title
     }
 
 }
