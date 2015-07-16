@@ -1,5 +1,5 @@
 //
-//  ExampleItem.swift
+//  ExampleViewModel.swift
 //  DataSourceExample
 //
 //  Created by Vadim Yelagin on 16/07/15.
@@ -7,13 +7,11 @@
 //
 
 import Foundation
+import DataSource
 
-struct ExampleItem {
-    
-    let title: String
-    
-    init(_ title: String) {
-        self.title = title
-    }
+protocol ExampleViewModel {
+
+    var title: String { get }
+    var dataSource: DataSource { get }
     
 }

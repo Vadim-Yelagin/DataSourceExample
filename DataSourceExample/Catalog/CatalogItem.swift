@@ -11,5 +11,11 @@ import Foundation
 struct CatalogItem {
     
     let title: String
+    let viewModel: () -> ExampleViewModel
+    
+    init(title: String, viewModel:() -> ExampleViewModel) {
+        self.title = title
+        self.viewModel = viewModel
+    }
     
 }

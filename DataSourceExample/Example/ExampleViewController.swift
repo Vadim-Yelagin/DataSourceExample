@@ -15,6 +15,15 @@ class ExampleViewController: UIViewController {
     
     let dataSource = TableViewDataSource()
     
+    var viewModel: ExampleViewModel? {
+        didSet {
+            if let viewModel = self.viewModel {
+                self.navigationItem.title = viewModel.title
+                self.dataSource.dataSource.innerDataSource.value = viewModel.dataSource
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource.tableView = self.tableView

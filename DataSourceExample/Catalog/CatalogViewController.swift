@@ -17,9 +17,8 @@ class CatalogViewController: UIViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let one = CatalogItem(title: "one")
-        let two = CatalogItem(title: "two")
-        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [one, two])
+        let staticItems = CatalogItem(title: "Static (items)") { StaticItemsViewModel() }
+        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [staticItems])
     }
     
     override func viewDidLoad() {
@@ -31,6 +30,17 @@ class CatalogViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView?.deselectAllRows(animated)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let nc = segue.destinationViewController as? UINavigationController,
+            vc = nc.topViewController as? ExampleViewController,
+            cell = sender as? CatalogCell,
+            item = cell.item.value as? CatalogItem
+            where segue.identifier == "ShowExampleSegue"
+        {
+            vc.viewModel = item.viewModel()
+        }
     }
     
 }
