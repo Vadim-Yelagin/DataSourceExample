@@ -9,6 +9,7 @@
 import Foundation
 import DataSource
 import UIKit
+import ReactiveCocoa
 
 final class ProxyViewModel: ExampleViewModel {
     
@@ -24,7 +25,11 @@ final class ProxyViewModel: ExampleViewModel {
         }]
     }()
     
-    let proxyDataSource = ProxyDataSource(ProxyViewModel.randomDataSource())
+    let proxyDataSource: ProxyDataSource = {
+        let result = ProxyDataSource(ProxyViewModel.randomDataSource())
+        result.animatesChanges.value = true
+        return result
+    }()
     
     func random() {
         self.proxyDataSource.innerDataSource.value = ProxyViewModel.randomDataSource()
