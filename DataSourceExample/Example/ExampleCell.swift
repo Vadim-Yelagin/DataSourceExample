@@ -14,7 +14,9 @@ class ExampleCell: TableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let items: SignalProducer<ExampleItem, NoError> = self.item.producer |> filterMap(cast)
+        let items = self.item.producer
+            |> map { $0 as? ExampleItem }
+            |> ignoreNil
         items |> start(self, ExampleCell.configureWithItem)
         items |> flatMap(.Latest) { $0.on.producer }
               |> start(self, ExampleCell.configureWithOn)

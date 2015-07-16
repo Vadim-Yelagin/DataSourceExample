@@ -15,7 +15,8 @@ class CatalogCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.item.producer
-            |> filterMap(cast)
+            |> map { $0 as? CatalogItem }
+            |> ignoreNil
             |> start(self, CatalogCell.configureWithItem)
     }
     
