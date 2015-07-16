@@ -21,7 +21,8 @@ class CatalogViewController: UIViewController {
             CatalogItem(title: "Static (items)") { StaticItemsViewModel() },
             CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() },
             CatalogItem(title: "Proxy") { ProxyViewModel() },
-            CatalogItem(title: "Auto Diff") { AutoDiffViewModel() }
+            CatalogItem(title: "Auto Diff") { AutoDiffViewModel() },
+            CatalogItem(title: "Composite") { CompositeViewModel() }
         ])
     }
     

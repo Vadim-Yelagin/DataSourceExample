@@ -35,6 +35,7 @@
 		02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */; };
 		02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C01B57FC7C00D2F5AD /* RandomData.swift */; };
 		02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */; };
+		02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +82,7 @@
 		02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelAction.swift; sourceTree = "<group>"; };
 		02FE33C01B57FC7C00D2F5AD /* RandomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffViewModel.swift; sourceTree = "<group>"; };
+		02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */,
+				02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */,
 				02AB3C501B57E33B00CF5A35 /* ProxyViewModel.swift */,
 				024943401B57CE23009110DE /* StaticItemsViewModel.swift */,
 				02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */,
@@ -279,6 +282,7 @@
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,
+				02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
 				028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */,
 				024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */,
