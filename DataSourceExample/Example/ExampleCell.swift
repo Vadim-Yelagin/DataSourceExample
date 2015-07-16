@@ -12,6 +12,8 @@ import ReactiveCocoa
 
 class ExampleCell: TableViewCell {
     
+    @IBOutlet var titleLabel: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
@@ -23,7 +25,7 @@ class ExampleCell: TableViewCell {
     }
     
     func configureWithItem(item: ExampleItem) {
-        self.textLabel?.text = item.title
+        self.titleLabel?.text = item.title
     }
     
     func configureWithOn(on: Bool) {

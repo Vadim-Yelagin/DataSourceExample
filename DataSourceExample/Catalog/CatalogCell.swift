@@ -11,6 +11,8 @@ import DataSource
 import ReactiveCocoa
 
 class CatalogCell: TableViewCell {
+    
+    @IBOutlet var titleLabel: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +23,7 @@ class CatalogCell: TableViewCell {
     }
     
     func configureWithItem(item: CatalogItem) {
-        self.textLabel?.text = item.title
+        self.titleLabel?.text = item.title
     }
 
 }
