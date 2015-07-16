@@ -13,7 +13,7 @@ class ExampleViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView?
     
-    let dataSource = TableViewDataSource()
+    let dataSource = TableViewDataSourceWithHeaderFooterTitles()
     
     var viewModel: ExampleViewModel? {
         didSet {

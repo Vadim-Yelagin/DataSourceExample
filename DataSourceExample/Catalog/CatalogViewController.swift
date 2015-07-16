@@ -18,7 +18,9 @@ class CatalogViewController: UIViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         let staticItems = CatalogItem(title: "Static (items)") { StaticItemsViewModel() }
-        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [staticItems])
+        let staticSections = CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() }
+        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(
+            items: [staticItems, staticSections])
     }
     
     override func viewDidLoad() {

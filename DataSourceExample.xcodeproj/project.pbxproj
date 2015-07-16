@@ -30,6 +30,7 @@
 		028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0B1B57C76A0079FBFE /* ExampleCell.swift */; };
 		028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */; };
 		028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */; };
+		02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		028F5F0B1B57C76A0079FBFE /* ExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticSectionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				024943401B57CE23009110DE /* StaticItemsViewModel.swift */,
+				02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
+				02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
