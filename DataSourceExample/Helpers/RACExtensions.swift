@@ -22,7 +22,7 @@ func start<T: AnyObject, V, E>
     })
 }
 
-func cast<W, V>(value: V) -> W?
+func cast<W, V>(value: V?) -> W?
 {
     return value as? W
 }

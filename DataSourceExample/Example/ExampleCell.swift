@@ -19,7 +19,7 @@ class ExampleCell: TableViewCell {
             |> start(self, ExampleCell.configureWithItem)
     }
     
-    func configureWithItem(item: CatalogItem) {
+    func configureWithItem(item: ExampleItem) {
         self.textLabel?.text = item.title
     }
 
