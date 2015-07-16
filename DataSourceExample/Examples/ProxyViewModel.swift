@@ -13,7 +13,7 @@ import ReactiveCocoa
 
 final class ProxyViewModel: ExampleViewModel {
     
-    let title = "Static (sections)"
+    let title = "Proxy"
     
     var dataSource: DataSource {
         return proxyDataSource
