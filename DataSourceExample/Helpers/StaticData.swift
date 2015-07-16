@@ -10,7 +10,15 @@ import Foundation
 
 struct StaticData {
     
-    static let items = (0 ..< 7).map { ExampleItem(RandomData.spell(126 + 113 * $0)) }
+    static let items = [
+        "Great Pyramid of Giza",
+        "Hanging Gardens of Babylon",
+        "Statue of Zeus at Olympia",
+        "Temple of Artemis at Ephesus",
+        "Mausoleum at Halicarnassus",
+        "Colossus of Rhodes",
+        "Lighthouse of Alexandria"
+        ].map { ExampleItem($0) }
     
     static func randomItem() -> ExampleItem {
         return items[random(items.count)]

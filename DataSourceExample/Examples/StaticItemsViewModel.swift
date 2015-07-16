@@ -13,11 +13,7 @@ final class StaticItemsViewModel: ExampleViewModel {
     
     let title = "Static (items)"
     
-    let dataSource: DataSource = StaticDataSource(items: [
-        ExampleItem("One"),
-        ExampleItem("Two"),
-        ExampleItem("Three")
-    ])
+    let dataSource: DataSource = StaticDataSource(items: StaticData.items)
     
     var actions: [ExampleViewModelAction] {
         return []
