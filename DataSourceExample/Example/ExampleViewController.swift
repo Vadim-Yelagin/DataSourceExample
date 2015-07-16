@@ -13,7 +13,7 @@ private func space() -> UIBarButtonItem {
     return UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
 }
 
-class ExampleViewController: UIViewController {
+class ExampleViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView?
     
@@ -39,6 +39,12 @@ class ExampleViewController: UIViewController {
             tableView.sectionHeaderHeight = UITableViewAutomaticDimension
             tableView.dataSource = self.dataSource
             self.dataSource.tableView = tableView
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let item = self.dataSource.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
+            item.on.value = !item.on.value
         }
     }
 

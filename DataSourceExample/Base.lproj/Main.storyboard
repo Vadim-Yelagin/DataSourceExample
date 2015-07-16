@@ -46,6 +46,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="delegate" destination="JEX-9P-axG" id="GcE-Er-AXY"/>
+                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Example" id="mOI-FS-AaM"/>

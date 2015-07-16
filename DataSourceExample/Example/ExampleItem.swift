@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
-struct ExampleItem {
+final class ExampleItem {
     
     let title: String
+    let on = MutableProperty(false)
     
     init(_ title: String) {
         self.title = title

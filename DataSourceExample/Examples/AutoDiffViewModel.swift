@@ -24,12 +24,12 @@ final class AutoDiffViewModel: ExampleViewModel {
         }]
     }()
     
-    let autoDiffDataSource = AutoDiffDataSource(RandomData.items(count: 25, value: 7)) {
-        $0.title == $1.title
+    let autoDiffDataSource = AutoDiffDataSource(StaticData.randomItems()) {
+        $0 === $1
     }
     
     func random() {
-        self.autoDiffDataSource.items.value = RandomData.items(count: 25, value: 7)
+        self.autoDiffDataSource.items.value = StaticData.randomItems()
     }
     
 }

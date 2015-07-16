@@ -10,10 +10,6 @@ import Foundation
 import DataSource
 import ReactiveCocoa
 
-private func randomItems() -> [ExampleItem] {
-    return RandomData.items(count: 5, value: 4)
-}
-
 final class CompositeViewModel: ExampleViewModel {
     
     let title = "Composite"
@@ -30,23 +26,23 @@ final class CompositeViewModel: ExampleViewModel {
             }]
     }()
     
-    let autoDiff1 = AutoDiffDataSource(randomItems(),
+    let autoDiff1 = AutoDiffDataSource(StaticData.randomItems(),
         supplementaryItems: [UICollectionElementKindSectionHeader: "First Auto Diff"])
         {
             $0.title == $1.title
         }
     
-    let autoDiff2 = AutoDiffDataSource(randomItems(),
+    let autoDiff2 = AutoDiffDataSource(StaticData.randomItems(),
         supplementaryItems: [UICollectionElementKindSectionHeader: "Second Auto Diff"]) {
             $0.title == $1.title
         }
     
     func random1() {
-        self.autoDiff1.items.value = randomItems()
+        self.autoDiff1.items.value = StaticData.randomItems()
     }
     
     func random2() {
-        self.autoDiff2.items.value = randomItems()
+        self.autoDiff2.items.value = StaticData.randomItems()
     }
     
 }

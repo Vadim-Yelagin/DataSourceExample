@@ -36,6 +36,7 @@
 		02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C01B57FC7C00D2F5AD /* RandomData.swift */; };
 		02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */; };
 		02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */; };
+		02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C61B58319000D2F5AD /* StaticData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		02FE33C01B57FC7C00D2F5AD /* RandomData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffViewModel.swift; sourceTree = "<group>"; };
 		02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeViewModel.swift; sourceTree = "<group>"; };
+		02FE33C61B58319000D2F5AD /* StaticData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				024943451B57D731009110DE /* RACExtensions.swift */,
 				02FE33C01B57FC7C00D2F5AD /* RandomData.swift */,
 				024943491B57D7D4009110DE /* SplitHackDelegate.swift */,
+				02FE33C61B58319000D2F5AD /* StaticData.swift */,
 				024943461B57D731009110DE /* UIExtensions.swift */,
 			);
 			path = Helpers;
@@ -285,6 +288,7 @@
 				02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
 				028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */,
+				02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */,
 				024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

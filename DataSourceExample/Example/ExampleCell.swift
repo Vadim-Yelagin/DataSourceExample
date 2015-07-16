@@ -14,13 +14,18 @@ class ExampleCell: TableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.item.producer
-            |> filterMap(cast)
-            |> start(self, ExampleCell.configureWithItem)
+        let items: SignalProducer<ExampleItem, NoError> = self.item.producer |> filterMap(cast)
+        items |> start(self, ExampleCell.configureWithItem)
+        items |> flatMap(.Latest) { $0.on.producer }
+              |> start(self, ExampleCell.configureWithOn)
     }
     
     func configureWithItem(item: ExampleItem) {
         self.textLabel?.text = item.title
+    }
+    
+    func configureWithOn(on: Bool) {
+        self.accessoryType = on ? .Checkmark : .None
     }
 
 }
