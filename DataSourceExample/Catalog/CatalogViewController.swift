@@ -20,8 +20,9 @@ class CatalogViewController: UIViewController {
         let staticItems = CatalogItem(title: "Static (items)") { StaticItemsViewModel() }
         let staticSections = CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() }
         let proxy = CatalogItem(title: "Proxy") { ProxyViewModel() }
+        let autoDiff = CatalogItem(title: "Auto Diff") { AutoDiffViewModel() }
         self.dataSource.dataSource.innerDataSource.value = StaticDataSource(
-            items: [staticItems, staticSections, proxy])
+            items: [staticItems, staticSections, proxy, autoDiff])
     }
     
     override func viewDidLoad() {
