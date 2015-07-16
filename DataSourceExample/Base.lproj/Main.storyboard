@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--Master-->
+        <!--Catalog-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <viewController title="Master" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="DataSourceExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Master" id="7bK-jq-Zjz" userLabel="Catalog" customClass="CatalogViewController" customModule="DataSourceExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
                             <outlet property="dataSource" destination="k00-AJ-BrE" id="1IX-gV-5m6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Catalog" id="Zdf-7t-Un8"/>
                     <connections>
                         <outlet property="dataSource" destination="k00-AJ-BrE" id="rVB-wh-iyZ"/>
                         <outlet property="tableView" destination="r7i-6Z-zg0" id="Owk-Xr-Euj"/>

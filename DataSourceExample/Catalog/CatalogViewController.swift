@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  CatalogViewController.swift
 //  DataSourceExample
 //
 //  Created by Vadim Yelagin on 15/06/15.
@@ -9,7 +9,7 @@
 import UIKit
 import DataSource
 
-class MasterViewController: UIViewController {
+class CatalogViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView?
     @IBOutlet var dataSource: TableViewDataSource?
