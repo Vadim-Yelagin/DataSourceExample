@@ -16,7 +16,7 @@ private func randomItems() -> [ExampleItem] {
 
 final class CompositeViewModel: ExampleViewModel {
     
-    let title = "Composite (two auto diffs)"
+    let title = "Composite"
     
     lazy var dataSource: DataSource = {
         return CompositeDataSource([self.autoDiff1, self.autoDiff2])
