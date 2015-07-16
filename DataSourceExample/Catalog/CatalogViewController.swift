@@ -28,8 +28,13 @@ class CatalogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource.tableView = self.tableView
-        self.tableView?.dataSource = self.dataSource
+        if let tableView = self.tableView {
+            tableView.estimatedRowHeight = 44
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+            tableView.dataSource = self.dataSource
+            self.dataSource.tableView = tableView
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
