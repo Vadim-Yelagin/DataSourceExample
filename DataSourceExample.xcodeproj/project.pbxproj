@@ -37,6 +37,7 @@
 		02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */; };
 		02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */; };
 		02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C61B58319000D2F5AD /* StaticData.swift */; };
+		02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +86,7 @@
 		02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffViewModel.swift; sourceTree = "<group>"; };
 		02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeViewModel.swift; sourceTree = "<group>"; };
 		02FE33C61B58319000D2F5AD /* StaticData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				024943451B57D731009110DE /* RACExtensions.swift */,
 				02FE33C01B57FC7C00D2F5AD /* RandomData.swift */,
 				024943491B57D7D4009110DE /* SplitHackDelegate.swift */,
+				02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */,
 				02FE33C61B58319000D2F5AD /* StaticData.swift */,
 				024943461B57D731009110DE /* UIExtensions.swift */,
 			);
@@ -277,6 +280,7 @@
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
 				028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */,
+				02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
