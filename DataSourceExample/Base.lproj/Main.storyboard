@@ -64,11 +64,13 @@
                 <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
+                        <outlet property="delegate" destination="Aa5-cp-XUb" id="ugE-pA-dPX"/>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
                         <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
+                <customObject id="Aa5-cp-XUb" customClass="SplitHackDelegate" customModule="DataSourceExample" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
@@ -131,6 +133,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
