@@ -26,8 +26,15 @@ class InputFormViewController: UIViewController {
                 return "DefaultCell"
             }
         }
-        let name = InputFormTextItem(placeholder: "Name", property: data.name)
-        self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: [name])
+        var name = InputFormTextItem(placeholder: "Full Name", property: data.name)
+        name.autocapitalizationType = .Words
+        var email = InputFormTextItem(placeholder: "Email Address", property: data.email)
+        email.keyboardType = .EmailAddress
+        var zip = InputFormTextItem(placeholder: "ZIP Code", property: data.zip)
+        zip.keyboardType = .NumberPad
+        var password = InputFormTextItem(placeholder: "Password", property: data.password)
+        password.secureTextEntry = true
+        self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: [name, email, zip, password])
     }
     
     override func viewDidLoad() {

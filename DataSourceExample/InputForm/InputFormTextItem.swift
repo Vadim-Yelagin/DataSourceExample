@@ -18,6 +18,11 @@ struct InputFormTextItem: InputFormItem {
     let placeholder: String
     let property: MutableProperty<String>
     
+    var autocapitalizationType = UITextAutocapitalizationType.None
+    var autocorrectionType = UITextAutocorrectionType.No
+    var keyboardType = UIKeyboardType.Default
+    var secureTextEntry = false
+    
     init(placeholder: String, property: MutableProperty<String>) {
         self.placeholder = placeholder
         self.property = property

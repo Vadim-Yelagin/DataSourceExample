@@ -12,5 +12,8 @@ import ReactiveCocoa
 final class InputFormData {
     
     let name = MutableProperty("")
+    let email = MutableProperty("")
+    let zip = MutableProperty("")
+    let password = MutableProperty("")
     
 }
