@@ -40,6 +40,7 @@
 		02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */; };
 		02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */; };
 		02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */; };
+		02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,6 +92,7 @@
 		02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackViewController.swift; sourceTree = "<group>"; };
 		02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewReusableView.swift; sourceTree = "<group>"; };
+		02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */,
 				02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */,
+				02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */,
 				02AB3C501B57E33B00CF5A35 /* ProxyViewModel.swift */,
 				024943401B57CE23009110DE /* StaticItemsViewModel.swift */,
 				02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */,
@@ -282,6 +285,7 @@
 			files = (
 				0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */,
 				02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */,
+				02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */,
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
