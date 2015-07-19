@@ -45,6 +45,10 @@
 		02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */; };
 		02FE33D81B5BC30900D2F5AD /* EditingTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D71B5BC30900D2F5AD /* EditingTableViewDataSource.swift */; };
 		02FE33DB1B5BF22000D2F5AD /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33DA1B5BF22000D2F5AD /* InputFormViewController.swift */; };
+		02FE33DD1B5BF2A400D2F5AD /* InputFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */; };
+		02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */; };
+		02FE33E11B5BF37000D2F5AD /* InputFormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */; };
+		02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -101,6 +105,10 @@
 		02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogStaticItem.swift; sourceTree = "<group>"; };
 		02FE33D71B5BC30900D2F5AD /* EditingTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTableViewDataSource.swift; sourceTree = "<group>"; };
 		02FE33DA1B5BF22000D2F5AD /* InputFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
+		02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormData.swift; sourceTree = "<group>"; };
+		02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormTextItem.swift; sourceTree = "<group>"; };
+		02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormTextFieldCell.swift; sourceTree = "<group>"; };
+		02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +243,10 @@
 		02FE33D91B5BF10D00D2F5AD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
+				02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */,
+				02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */,
+				02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */,
+				02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */,
 				02FE33DA1B5BF22000D2F5AD /* InputFormViewController.swift */,
 			);
 			path = InputForm;
@@ -315,6 +327,7 @@
 				02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */,
 				02FE33D81B5BC30900D2F5AD /* EditingTableViewDataSource.swift in Sources */,
 				02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */,
+				02FE33DD1B5BF2A400D2F5AD /* InputFormData.swift in Sources */,
 				02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */,
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
@@ -323,10 +336,13 @@
 				02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
+				02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
+				02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */,
 				02FE33DB1B5BF22000D2F5AD /* InputFormViewController.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
 				02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */,
+				02FE33E11B5BF37000D2F5AD /* InputFormTextFieldCell.swift in Sources */,
 				02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */,
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,

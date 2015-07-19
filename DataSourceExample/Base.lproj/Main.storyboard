@@ -377,30 +377,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DefaultCell" id="vtM-jP-6Js" customClass="ExampleTableViewCell" customModule="DataSourceExample" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormText" id="vtM-jP-6Js" customClass="InputFormTextFieldCell" customModule="DataSourceExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtM-jP-6Js" id="QRV-Y8-X7q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR3-mZ-A6W">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBz-Sq-2fc">
                                             <rect key="frame" x="8" y="12" width="584" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="rR3-mZ-A6W" secondAttribute="trailing" id="0tE-PM-TaC"/>
-                                        <constraint firstItem="rR3-mZ-A6W" firstAttribute="top" secondItem="QRV-Y8-X7q" secondAttribute="topMargin" constant="4" id="3f8-mn-cLi"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rR3-mZ-A6W" secondAttribute="bottom" constant="4" id="M0P-a0-Rxv"/>
-                                        <constraint firstItem="rR3-mZ-A6W" firstAttribute="leading" secondItem="QRV-Y8-X7q" secondAttribute="leadingMargin" id="t9W-8N-dQQ"/>
+                                        <constraint firstItem="ZBz-Sq-2fc" firstAttribute="top" secondItem="QRV-Y8-X7q" secondAttribute="topMargin" constant="4" id="22A-uK-XkY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZBz-Sq-2fc" secondAttribute="trailing" id="I8D-NM-pm1"/>
+                                        <constraint firstItem="ZBz-Sq-2fc" firstAttribute="leading" secondItem="QRV-Y8-X7q" secondAttribute="leadingMargin" id="i7I-7m-2oE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZBz-Sq-2fc" secondAttribute="bottom" constant="4" id="q4u-10-uBa"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="titleLabel" destination="rR3-mZ-A6W" id="csj-c1-9LC"/>
+                                    <outlet property="textField" destination="ZBz-Sq-2fc" id="Ier-i4-yfe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

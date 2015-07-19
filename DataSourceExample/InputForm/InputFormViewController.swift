@@ -13,11 +13,21 @@ class InputFormViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView?
     
+    let data = InputFormData()
     let tableDataSource = TableViewDataSource()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.tableDataSource.dataSource.innerDataSource.value = RandomData.dataSource()
+        self.tableDataSource.reuseIdentifierForItem = {
+            _, item in
+            if let item = item as? InputFormItem {
+                return item.reuseIdentifier
+            } else {
+                return "DefaultCell"
+            }
+        }
+        let name = InputFormTextItem(placeholder: "Name", property: data.name)
+        self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: [name])
     }
     
     override func viewDidLoad() {
