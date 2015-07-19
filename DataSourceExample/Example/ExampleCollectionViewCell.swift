@@ -31,5 +31,21 @@ class ExampleCollectionViewCell: CollectionViewCell {
     func configureWithOn(on: Bool) {
         self.titleLabel?.textColor = on ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.blackColor()
     }
+    
+    func updateBackground() {
+        self.backgroundColor = self.highlighted || self.selected ? .lightGrayColor() : .groupTableViewBackgroundColor()
+    }
+    
+    override var selected: Bool {
+        didSet {
+            self.updateBackground()
+        }
+    }
+    
+    override var highlighted: Bool {
+        didSet {
+            self.updateBackground()
+        }
+    }
 
 }

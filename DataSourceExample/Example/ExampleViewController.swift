@@ -13,7 +13,7 @@ private func space() -> UIBarButtonItem {
     return UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
 }
 
-class ExampleViewController: UIViewController, UITableViewDelegate {
+class ExampleViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegate {
     
     @IBOutlet var tableView: UITableView?
     @IBOutlet var collectionView: UICollectionView?
@@ -70,10 +70,18 @@ class ExampleViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
+    func selectItemAtIndexPath(indexPath: NSIndexPath) {
+        if let item = self.viewModel?.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
             item.on.value = !item.on.value
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectItemAtIndexPath(indexPath)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.selectItemAtIndexPath(indexPath)
     }
 
 }
