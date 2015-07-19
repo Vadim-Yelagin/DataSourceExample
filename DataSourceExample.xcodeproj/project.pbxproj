@@ -41,6 +41,8 @@
 		02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */; };
 		02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */; };
 		02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */; };
+		02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */; };
+		02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -93,6 +95,8 @@
 		02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewReusableView.swift; sourceTree = "<group>"; };
 		02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableViewModel.swift; sourceTree = "<group>"; };
+		02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
+		02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogStaticItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 			children = (
 				022B100D1B2F2FC400DD4DCD /* AppDelegate.swift */,
 				028F5EFF1B57C4910079FBFE /* Catalog */,
+				02FE33D21B5BBE5B00D2F5AD /* Editing */,
 				028F5F0A1B57C76A0079FBFE /* Example */,
 				0249433F1B57CE14009110DE /* Examples */,
 				024943441B57D731009110DE /* Helpers */,
@@ -193,6 +198,7 @@
 			children = (
 				028F5F001B57C4910079FBFE /* CatalogCell.swift */,
 				028F5F011B57C4910079FBFE /* CatalogItem.swift */,
+				02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */,
 				028F5F021B57C4910079FBFE /* CatalogViewController.swift */,
 			);
 			path = Catalog;
@@ -210,6 +216,14 @@
 				02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		02FE33D21B5BBE5B00D2F5AD /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */,
+			);
+			path = Editing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */,
+				02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */,
 				02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */,
 				02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */,
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,
@@ -300,6 +315,7 @@
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */,
+				02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,
 				02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,

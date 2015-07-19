@@ -17,14 +17,24 @@ class CatalogViewController: UIViewController {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: [
+        let items: [Any] = [
             CatalogItem(title: "Static (items)") { StaticItemsViewModel() },
             CatalogItem(title: "Static (sections)") { StaticSectionsViewModel() },
             CatalogItem(title: "Proxy") { ProxyViewModel() },
             CatalogItem(title: "Auto Diff") { AutoDiffViewModel() },
             CatalogItem(title: "Composite") { CompositeViewModel() },
-            CatalogItem(title: "Mutable") { MutableViewModel() }
-        ])
+            CatalogItem(title: "Mutable") { MutableViewModel() },
+            CatalogStaticItem(reuseIdentifier: "Editing")
+        ]
+        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: items)
+        self.dataSource.reuseIdentifierForItem = {
+            _, item in
+            if let item = item as? CatalogStaticItem {
+                return item.reuseIdentifier
+            } else {
+                return "DefaultCell"
+            }
+        }
     }
     
     override func viewDidLoad() {
