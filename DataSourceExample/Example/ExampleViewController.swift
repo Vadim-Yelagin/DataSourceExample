@@ -16,17 +16,31 @@ private func space() -> UIBarButtonItem {
 class ExampleViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView?
+    @IBOutlet var collectionView: UICollectionView?
     
-    let dataSource = TableViewDataSourceWithHeaderFooterTitles()
+    let tableDataSource = TableViewDataSourceWithHeaderFooterTitles()
+    let collectionDataSource = CollectionViewDataSource()
     
     var viewModel: ExampleViewModel? {
         didSet {
             if let viewModel = self.viewModel {
                 self.navigationItem.title = viewModel.title
-                self.dataSource.dataSource.innerDataSource.value = viewModel.dataSource
+                self.tableDataSource.dataSource.innerDataSource.value = viewModel.dataSource
+                self.collectionDataSource.dataSource.innerDataSource.value = viewModel.dataSource
                 self.toolbarItems = viewModel.actions.flatMap {
                     [space(), $0.barButtonItem()]
                 } + [space()]
+            }
+        }
+    }
+    
+    @IBAction func toggleView() {
+        if let tableView = self.tableView,
+            collectionView = self.collectionView
+        {
+            UIView.animateWithDuration(0.35) {
+                tableView.alpha = 1 - tableView.alpha
+                collectionView.alpha = 1 - collectionView.alpha
             }
         }
     }
@@ -37,13 +51,27 @@ class ExampleViewController: UIViewController, UITableViewDelegate {
             tableView.estimatedRowHeight = 44
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.sectionHeaderHeight = UITableViewAutomaticDimension
-            tableView.dataSource = self.dataSource
-            self.dataSource.tableView = tableView
+            tableView.dataSource = self.tableDataSource
+            self.tableDataSource.tableView = tableView
+        }
+        if let collectionView = self.collectionView {
+            collectionView.dataSource = self.collectionDataSource
+            self.collectionDataSource.collectionView = collectionView
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let tableView = self.tableView,
+            collectionView = self.collectionView
+        {
+            collectionView.scrollIndicatorInsets = tableView.scrollIndicatorInsets
+            collectionView.contentInset = tableView.contentInset
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let item = self.dataSource.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
+        if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
             item.on.value = !item.on.value
         }
     }

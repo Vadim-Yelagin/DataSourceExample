@@ -27,7 +27,7 @@
 		028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F001B57C4910079FBFE /* CatalogCell.swift */; };
 		028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F011B57C4910079FBFE /* CatalogItem.swift */; };
 		028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F021B57C4910079FBFE /* CatalogViewController.swift */; };
-		028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0B1B57C76A0079FBFE /* ExampleCell.swift */; };
+		028F5F0E1B57C76A0079FBFE /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0B1B57C76A0079FBFE /* ExampleTableViewCell.swift */; };
 		028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */; };
 		028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */; };
 		02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */; };
@@ -38,6 +38,7 @@
 		02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */; };
 		02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C61B58319000D2F5AD /* StaticData.swift */; };
 		02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */; };
+		02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,7 +77,7 @@
 		028F5F001B57C4910079FBFE /* CatalogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		028F5F011B57C4910079FBFE /* CatalogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
 		028F5F021B57C4910079FBFE /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
-		028F5F0B1B57C76A0079FBFE /* ExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		028F5F0B1B57C76A0079FBFE /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		02AB3C4E1B57DFC900CF5A35 /* StaticSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticSectionsViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeViewModel.swift; sourceTree = "<group>"; };
 		02FE33C61B58319000D2F5AD /* StaticData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackViewController.swift; sourceTree = "<group>"; };
+		02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +196,9 @@
 		028F5F0A1B57C76A0079FBFE /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				028F5F0B1B57C76A0079FBFE /* ExampleCell.swift */,
+				02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */,
 				028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */,
+				028F5F0B1B57C76A0079FBFE /* ExampleTableViewCell.swift */,
 				028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */,
 				0249433B1B57CBAD009110DE /* ExampleViewModel.swift */,
 				02CD36A61B57EEBC0030CE81 /* ExampleViewModelAction.swift */,
@@ -279,13 +282,14 @@
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,
 				028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */,
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
-				028F5F0E1B57C76A0079FBFE /* ExampleCell.swift in Sources */,
+				028F5F0E1B57C76A0079FBFE /* ExampleTableViewCell.swift in Sources */,
 				02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
 				02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */,
+				02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */,
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,

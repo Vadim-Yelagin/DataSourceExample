@@ -1,5 +1,5 @@
 //
-//  ExampleCell.swift
+//  ExampleTableViewCell.swift
 //  DataSourceExample
 //
 //  Created by Vadim Yelagin on 16/07/15.
@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class ExampleCell: TableViewCell {
+class ExampleTableViewCell: TableViewCell {
     
     @IBOutlet var titleLabel: UILabel?
     
@@ -19,9 +19,9 @@ class ExampleCell: TableViewCell {
         let items = self.item.producer
             |> map { $0 as? ExampleItem }
             |> ignoreNil
-        items |> start(self, ExampleCell.configureWithItem)
+        items |> start(self, ExampleTableViewCell.configureWithItem)
         items |> flatMap(.Latest) { $0.on.producer }
-              |> start(self, ExampleCell.configureWithOn)
+              |> start(self, ExampleTableViewCell.configureWithOn)
     }
     
     func configureWithItem(item: ExampleItem) {
