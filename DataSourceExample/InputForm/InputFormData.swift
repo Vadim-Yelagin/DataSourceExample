@@ -13,6 +13,7 @@ final class InputFormData {
     
     let name = MutableProperty("")
     let email = MutableProperty("")
+    let sendSpam = MutableProperty(true)
     let zip = MutableProperty("")
     let password = MutableProperty("")
     

@@ -402,6 +402,41 @@
                                     <outlet property="textField" destination="ZBz-Sq-2fc" id="Ier-i4-yfe"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormBool" id="fjQ-6y-aBd" customClass="InputFormSwitchCell" customModule="DataSourceExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fjQ-6y-aBd" id="auA-yI-hPt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-8Y-1LA">
+                                            <rect key="frame" x="8" y="12" width="527" height="19.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV7-ID-4aW">
+                                            <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="onEditing:" destination="fjQ-6y-aBd" eventType="valueChanged" id="CB4-eH-si4"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Q2H-8Y-1LA" secondAttribute="bottom" constant="4" id="4wX-vf-fLm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="eV7-ID-4aW" secondAttribute="trailing" id="BCM-IQ-KoR"/>
+                                        <constraint firstItem="eV7-ID-4aW" firstAttribute="leading" secondItem="Q2H-8Y-1LA" secondAttribute="trailing" constant="8" id="GaO-oy-Krr"/>
+                                        <constraint firstAttribute="centerY" secondItem="eV7-ID-4aW" secondAttribute="centerY" id="RTB-0i-hdC"/>
+                                        <constraint firstItem="Q2H-8Y-1LA" firstAttribute="leading" secondItem="auA-yI-hPt" secondAttribute="leadingMargin" id="eEI-cA-XRC"/>
+                                        <constraint firstItem="Q2H-8Y-1LA" firstAttribute="top" secondItem="auA-yI-hPt" secondAttribute="topMargin" constant="4" id="pZe-6s-aZM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="switchControl" destination="eV7-ID-4aW" id="Thw-2H-OIw"/>
+                                    <outlet property="titleLabel" destination="Q2H-8Y-1LA" id="dip-HM-PfY"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                     </tableView>

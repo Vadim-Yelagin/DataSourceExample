@@ -49,6 +49,8 @@
 		02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */; };
 		02FE33E11B5BF37000D2F5AD /* InputFormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */; };
 		02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */; };
+		02FE33E51B5BFF6C00D2F5AD /* InputFormBoolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */; };
+		02FE33E71B5BFFD900D2F5AD /* InputFormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E61B5BFFD900D2F5AD /* InputFormSwitchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +111,8 @@
 		02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormTextItem.swift; sourceTree = "<group>"; };
 		02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormTextFieldCell.swift; sourceTree = "<group>"; };
 		02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormItem.swift; sourceTree = "<group>"; };
+		02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormBoolItem.swift; sourceTree = "<group>"; };
+		02FE33E61B5BFFD900D2F5AD /* InputFormSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormSwitchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,11 +247,13 @@
 		02FE33D91B5BF10D00D2F5AD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
+				02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */,
 				02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */,
 				02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */,
 				02FE33E01B5BF37000D2F5AD /* InputFormTextFieldCell.swift */,
 				02FE33DE1B5BF2D500D2F5AD /* InputFormTextItem.swift */,
 				02FE33DA1B5BF22000D2F5AD /* InputFormViewController.swift */,
+				02FE33E61B5BFFD900D2F5AD /* InputFormSwitchCell.swift */,
 			);
 			path = InputForm;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
 				02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */,
 				02FE33DB1B5BF22000D2F5AD /* InputFormViewController.swift in Sources */,
+				02FE33E51B5BFF6C00D2F5AD /* InputFormBoolItem.swift in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
 				02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */,
 				02FE33E11B5BF37000D2F5AD /* InputFormTextFieldCell.swift in Sources */,
@@ -353,6 +360,7 @@
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
 				028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */,
 				02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */,
+				02FE33E71B5BFFD900D2F5AD /* InputFormSwitchCell.swift in Sources */,
 				024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
