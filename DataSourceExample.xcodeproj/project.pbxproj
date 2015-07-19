@@ -39,6 +39,7 @@
 		02FE33C71B58319000D2F5AD /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C61B58319000D2F5AD /* StaticData.swift */; };
 		02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */; };
 		02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */; };
+		02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +90,7 @@
 		02FE33C61B58319000D2F5AD /* StaticData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackViewController.swift; sourceTree = "<group>"; };
 		02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				02FE33CA1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift */,
+				02FE33CC1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift */,
 				028F5F0C1B57C76A0079FBFE /* ExampleItem.swift */,
 				028F5F0B1B57C76A0079FBFE /* ExampleTableViewCell.swift */,
 				028F5F0D1B57C76A0079FBFE /* ExampleViewController.swift */,
@@ -292,6 +295,7 @@
 				02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */,
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
+				02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,
 				02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
