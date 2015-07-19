@@ -13,7 +13,7 @@ private func space() -> UIBarButtonItem {
     return UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
 }
 
-class ExampleViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegate {
+class ExampleViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var tableView: UITableView?
     @IBOutlet var collectionView: UICollectionView?
@@ -82,6 +82,14 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         self.selectItemAtIndexPath(indexPath)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if let _ = self.viewModel?.dataSource.supplementaryItemOfKind(UICollectionElementKindSectionHeader, inSection: section) {
+            return CGSizeMake(44, 44)
+        } else {
+            return CGSizeZero
+        }
     }
 
 }
