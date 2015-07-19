@@ -13,12 +13,7 @@ class EditingViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView?
     
-    let tableDataSource = TableViewDataSourceWithHeaderFooterTitles()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.tableDataSource.dataSource.innerDataSource.value = RandomData.dataSource()
-    }
+    let tableDataSource = EditingTableViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +23,12 @@ class EditingViewController: UIViewController, UITableViewDelegate {
             tableView.sectionHeaderHeight = UITableViewAutomaticDimension
             tableView.dataSource = self.tableDataSource
             self.tableDataSource.tableView = tableView
+            tableView.editing = true
         }
+    }
+    
+    @IBAction func add() {
+        self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: 0)
     }
 
 }

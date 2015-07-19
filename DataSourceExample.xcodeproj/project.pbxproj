@@ -43,6 +43,7 @@
 		02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */; };
 		02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */; };
 		02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */; };
+		02FE33D81B5BC30900D2F5AD /* EditingTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33D71B5BC30900D2F5AD /* EditingTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,7 @@
 		02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableViewModel.swift; sourceTree = "<group>"; };
 		02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
 		02FE33D51B5BBEFD00D2F5AD /* CatalogStaticItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogStaticItem.swift; sourceTree = "<group>"; };
+		02FE33D71B5BC30900D2F5AD /* EditingTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				02FE33D31B5BBE7F00D2F5AD /* EditingViewController.swift */,
+				02FE33D71B5BC30900D2F5AD /* EditingTableViewDataSource.swift */,
 			);
 			path = Editing;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */,
 				02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */,
+				02FE33D81B5BC30900D2F5AD /* EditingTableViewDataSource.swift in Sources */,
 				02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */,
 				02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */,
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,

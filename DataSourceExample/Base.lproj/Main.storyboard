@@ -307,7 +307,15 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Editing" id="iXP-RQ-ExN"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Editing" id="iXP-RQ-ExN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yQB-ai-2Tj">
+                            <connections>
+                                <action selector="add" destination="bwy-9r-IkQ" id="VH0-md-PMc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gPe-6H-wzD" id="Yh2-VN-0R8"/>
                     </connections>
