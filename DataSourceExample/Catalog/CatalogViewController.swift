@@ -13,7 +13,7 @@ class CatalogViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView?
     
-    let dataSource = TableViewDataSource()
+    let tableDataSource = TableViewDataSource()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +26,8 @@ class CatalogViewController: UIViewController {
             CatalogItem(title: "Mutable") { MutableViewModel() },
             CatalogStaticItem(reuseIdentifier: "Editing")
         ]
-        self.dataSource.dataSource.innerDataSource.value = StaticDataSource(items: items)
-        self.dataSource.reuseIdentifierForItem = {
+        self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: items)
+        self.tableDataSource.reuseIdentifierForItem = {
             _, item in
             if let item = item as? CatalogStaticItem {
                 return item.reuseIdentifier
@@ -43,8 +43,8 @@ class CatalogViewController: UIViewController {
             tableView.estimatedRowHeight = 44
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.sectionHeaderHeight = UITableViewAutomaticDimension
-            tableView.dataSource = self.dataSource
-            self.dataSource.tableView = tableView
+            tableView.dataSource = self.tableDataSource
+            self.tableDataSource.tableView = tableView
         }
     }
     
