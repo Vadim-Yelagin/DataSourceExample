@@ -447,7 +447,13 @@
                         <sections/>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Input Form" id="GKx-b8-ks8"/>
+                    <navigationItem key="navigationItem" title="Input Form" id="GKx-b8-ks8">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="gip-Bu-pCz">
+                            <connections>
+                                <action selector="showData" destination="X3Z-Ek-bJQ" id="o0C-R9-Tea"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Y4N-z1-9t3" id="vbZ-aF-fZA"/>
