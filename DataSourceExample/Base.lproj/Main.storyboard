@@ -388,6 +388,12 @@
                                             <rect key="frame" x="8" y="12" width="584" height="19.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="onEditing:" destination="vtM-jP-6Js" eventType="editingDidEndOnExit" id="5SZ-eS-P0G"/>
+                                                <action selector="onEditing:" destination="vtM-jP-6Js" eventType="editingDidEnd" id="Ukd-NY-8mn"/>
+                                                <action selector="onEditing:" destination="vtM-jP-6Js" eventType="editingDidBegin" id="p0j-fA-Z0X"/>
+                                                <action selector="onEditing:" destination="vtM-jP-6Js" eventType="editingChanged" id="tnc-BD-Bgg"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>

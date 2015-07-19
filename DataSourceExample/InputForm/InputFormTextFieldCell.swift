@@ -22,7 +22,6 @@ class InputFormTextFieldCell: TableViewCell {
         items |> start(self, InputFormTextFieldCell.configureWithItem)
         items |> flatMap(.Latest) { $0.property.producer }
             |> start(self, InputFormTextFieldCell.configureWithValue)
-        self.textField?.addTarget(self, action: "onEditing:", forControlEvents: .AllEditingEvents)
     }
     
     func configureWithItem(item: InputFormTextItem) {
@@ -37,7 +36,7 @@ class InputFormTextFieldCell: TableViewCell {
         self.textField?.text = value
     }
     
-    func onEditing(textField: UITextField) {
+    @IBAction func onEditing(textField: UITextField) {
         if let item = self.item.value as? InputFormTextItem {
             item.property.value = textField.text
         }
