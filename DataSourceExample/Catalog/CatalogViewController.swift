@@ -24,7 +24,8 @@ class CatalogViewController: UIViewController {
             CatalogItem(title: "Auto Diff") { AutoDiffViewModel() },
             CatalogItem(title: "Composite") { CompositeViewModel() },
             CatalogItem(title: "Mutable") { MutableViewModel() },
-            CatalogStaticItem(reuseIdentifier: "Editing")
+            CatalogStaticItem(reuseIdentifier: "Editing"),
+            CatalogStaticItem(reuseIdentifier: "InputForm")
         ]
         self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: items)
         self.tableDataSource.reuseIdentifierForItem = {
