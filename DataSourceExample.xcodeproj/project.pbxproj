@@ -51,6 +51,10 @@
 		02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */; };
 		02FE33E51B5BFF6C00D2F5AD /* InputFormBoolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */; };
 		02FE33E71B5BFFD900D2F5AD /* InputFormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33E61B5BFFD900D2F5AD /* InputFormSwitchCell.swift */; };
+		02FE33F11B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33EA1B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.m */; };
+		02FE33F21B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33EC1B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.m */; };
+		02FE33F31B5C053800D2F5AD /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33EE1B5C053800D2F5AD /* TPKeyboardAvoidingTableView.m */; };
+		02FE33F41B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F01B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +117,14 @@
 		02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormItem.swift; sourceTree = "<group>"; };
 		02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormBoolItem.swift; sourceTree = "<group>"; };
 		02FE33E61B5BFFD900D2F5AD /* InputFormSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormSwitchCell.swift; sourceTree = "<group>"; };
+		02FE33E91B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		02FE33EA1B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		02FE33EB1B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		02FE33EC1B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		02FE33ED1B5C053800D2F5AD /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		02FE33EE1B5C053800D2F5AD /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		02FE33EF1B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		02FE33F01B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,7 @@
 		022B0FFF1B2F2FC400DD4DCD = {
 			isa = PBXGroup;
 			children = (
+				02FE33E81B5C053800D2F5AD /* TPKeyboardAvoiding */,
 				022B100A1B2F2FC400DD4DCD /* DataSourceExample */,
 				028F5EF81B57BDC30079FBFE /* Frameworks */,
 				022B10091B2F2FC400DD4DCD /* Products */,
@@ -258,6 +271,21 @@
 			path = InputForm;
 			sourceTree = "<group>";
 		};
+		02FE33E81B5C053800D2F5AD /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				02FE33E91B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.h */,
+				02FE33EA1B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.m */,
+				02FE33EB1B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.h */,
+				02FE33EC1B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.m */,
+				02FE33ED1B5C053800D2F5AD /* TPKeyboardAvoidingTableView.h */,
+				02FE33EE1B5C053800D2F5AD /* TPKeyboardAvoidingTableView.m */,
+				02FE33EF1B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				02FE33F01B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,14 +375,18 @@
 				02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */,
 				02FE33DB1B5BF22000D2F5AD /* InputFormViewController.swift in Sources */,
 				02FE33E51B5BFF6C00D2F5AD /* InputFormBoolItem.swift in Sources */,
+				02FE33F11B5C053800D2F5AD /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */,
 				02AB3C4F1B57DFC900CF5A35 /* StaticSectionsViewModel.swift in Sources */,
+				02FE33F31B5C053800D2F5AD /* TPKeyboardAvoidingTableView.m in Sources */,
+				02FE33F21B5C053800D2F5AD /* TPKeyboardAvoidingScrollView.m in Sources */,
 				02FE33E11B5BF37000D2F5AD /* InputFormTextFieldCell.swift in Sources */,
 				02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */,
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
 				02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */,
 				02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */,
+				02FE33F41B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				028F5F0F1B57C76A0079FBFE /* ExampleItem.swift in Sources */,
 				02FE33C51B58008600D2F5AD /* CompositeViewModel.swift in Sources */,
 				028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */,
