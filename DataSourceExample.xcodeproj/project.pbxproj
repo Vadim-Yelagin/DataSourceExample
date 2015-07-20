@@ -57,6 +57,8 @@
 		02FE33F41B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F01B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		02FE33F61B5CDD5400D2F5AD /* InputFormOptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F51B5CDD5400D2F5AD /* InputFormOptionItem.swift */; };
 		02FE33F81B5CDEE900D2F5AD /* InputFormOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F71B5CDEE900D2F5AD /* InputFormOptionCell.swift */; };
+		02FE33FA1B5CEDD800D2F5AD /* InputFormDateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */; };
+		02FE33FC1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33FB1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,6 +131,8 @@
 		02FE33F01B5C053800D2F5AD /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		02FE33F51B5CDD5400D2F5AD /* InputFormOptionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormOptionItem.swift; sourceTree = "<group>"; };
 		02FE33F71B5CDEE900D2F5AD /* InputFormOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormOptionCell.swift; sourceTree = "<group>"; };
+		02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormDateItem.swift; sourceTree = "<group>"; };
+		02FE33FB1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormDatePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,8 @@
 			children = (
 				02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */,
 				02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */,
+				02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */,
+				02FE33FB1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift */,
 				02FE33E21B5BF3CB00D2F5AD /* InputFormItem.swift */,
 				02FE33F71B5CDEE900D2F5AD /* InputFormOptionCell.swift */,
 				02FE33F51B5CDD5400D2F5AD /* InputFormOptionItem.swift */,
@@ -374,7 +380,9 @@
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
 				028F5F0E1B57C76A0079FBFE /* ExampleTableViewCell.swift in Sources */,
 				02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */,
+				02FE33FA1B5CEDD800D2F5AD /* InputFormDateItem.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
+				02FE33FC1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift in Sources */,
 				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,

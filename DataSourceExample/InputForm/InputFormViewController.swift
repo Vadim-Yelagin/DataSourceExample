@@ -49,16 +49,18 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         
         var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
         zip.keyboardType = .NumberPad
+        let date = InputFormDateItem(title: "Date", property: data.date)
         var password = InputFormTextItem(title: "Password", property: data.password)
         password.secureTextEntry = true
-        let items3: [InputFormItem] = [zip, password]
+        let items3: [InputFormItem] = [zip, date, password]
         let static3 = StaticDataSource(items: items3)
         
         self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, proxy2, static3])
     }
     
     @IBAction func showData() {
-        let message = "Full Name: \(data.name.value)\nEmail Address: \(data.email.value)\nSend SPAM: \(data.sendSpam.value)\nPeriod: \(data.period.value.title)\nZIP Code: \(data.zip.value)\nPassword: \(data.password.value)"
+        let date = NSDateFormatter.localizedStringFromDate(data.date.value, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        let message = "Full Name: \(data.name.value)\nEmail Address: \(data.email.value)\nSend SPAM: \(data.sendSpam.value)\nPeriod: \(data.period.value.title)\nZIP Code: \(data.zip.value)\nDate: \(date)\nPassword: \(data.password.value)"
         let alert = UIAlertController(title: "Data", message: message, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)

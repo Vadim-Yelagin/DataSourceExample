@@ -36,5 +36,6 @@ final class InputFormData {
     let zip = MutableProperty("")
     let password = MutableProperty("")
     let period = MutableProperty(InputFormDataPeriod.Daily)
+    let date = MutableProperty(NSDate())
     
 }

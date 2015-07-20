@@ -493,6 +493,35 @@
                                     <outlet property="titleLabel" destination="143-lu-vn4" id="kfS-yC-ZdF"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormDate" rowHeight="195" id="s09-qY-P0n" customClass="InputFormDatePickerCell" customModule="DataSourceExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s09-qY-P0n" id="mTz-nK-zu2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-LJ-YKr">
+                                            <rect key="frame" x="0.0" y="7.5" width="600" height="180"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="459074906.75237399">
+                                                <!--2015-07-20 08:48:26 +0000-->
+                                            </date>
+                                            <connections>
+                                                <action selector="onEditing:" destination="s09-qY-P0n" eventType="valueChanged" id="kOP-OZ-a4E"/>
+                                            </connections>
+                                        </datePicker>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="F2Q-LJ-YKr" firstAttribute="top" secondItem="mTz-nK-zu2" secondAttribute="top" id="C8g-At-sxM"/>
+                                        <constraint firstItem="F2Q-LJ-YKr" firstAttribute="leading" secondItem="mTz-nK-zu2" secondAttribute="leading" id="L8l-1U-Geq"/>
+                                        <constraint firstAttribute="bottom" secondItem="F2Q-LJ-YKr" secondAttribute="bottom" id="Xbl-XM-xfe"/>
+                                        <constraint firstAttribute="trailing" secondItem="F2Q-LJ-YKr" secondAttribute="trailing" id="XpP-kD-url"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="datePicker" destination="F2Q-LJ-YKr" id="ynM-sW-c5k"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
