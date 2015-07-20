@@ -8,6 +8,7 @@
 
 import UIKit
 import DataSource
+import ReactiveCocoa
 
 class InputFormViewController: UIViewController, UITableViewDelegate {
     
@@ -39,6 +40,12 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         let monthly = InputFormOptionItem(title: "Monthly", property: data.period, value: .Monthly)
         let items2: [InputFormItem] = [daily, weekly, monthly]
         let static2 = StaticDataSource(items: items2)
+        let empty2 = EmptyDataSource()
+        let proxy2 = ProxyDataSource(empty2)
+        proxy2.innerDataSource <~ data.sendSpam.producer |> map {
+            (sendSpam: Bool) -> DataSource in
+            return sendSpam ? static2 : empty2
+        }
         
         var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
         zip.keyboardType = .NumberPad
@@ -47,7 +54,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         let items3: [InputFormItem] = [zip, password]
         let static3 = StaticDataSource(items: items3)
         
-        self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, static2, static3])
+        self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, proxy2, static3])
     }
     
     @IBAction func showData() {
