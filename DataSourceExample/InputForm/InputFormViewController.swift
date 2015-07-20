@@ -55,12 +55,19 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         }
         let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
         let date = InputFormDateItem(title: "Date", property: data.date)
+        date.expanded <~ dateAccessory.expanded
+        date.expanded.producer |> start(self, InputFormViewController.updateRowHeights)
         var password = InputFormTextItem(title: "Password", property: data.password)
         password.secureTextEntry = true
         let items3: [InputFormItem] = [zip, dateAccessory, date, password]
         let static3 = StaticDataSource(items: items3)
         
         self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, proxy2, static3])
+    }
+    
+    func updateRowHeights(dummy: Bool) {
+        self.tableView?.beginUpdates()
+        self.tableView?.endUpdates()
     }
     
     @IBAction func showData() {
@@ -89,6 +96,13 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? InputFormItem {
             item.select()
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? InputFormDateItem where !item.expanded.value {
+            return 0
+        }
+        return UITableViewAutomaticDimension
     }
 
 }
