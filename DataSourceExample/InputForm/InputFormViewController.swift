@@ -49,10 +49,15 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         
         var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
         zip.keyboardType = .NumberPad
+        let formattedDate = MutableProperty("")
+        formattedDate <~ data.date.producer |> map {
+            NSDateFormatter.localizedStringFromDate($0, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        }
+        let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
         let date = InputFormDateItem(title: "Date", property: data.date)
         var password = InputFormTextItem(title: "Password", property: data.password)
         password.secureTextEntry = true
-        let items3: [InputFormItem] = [zip, date, password]
+        let items3: [InputFormItem] = [zip, dateAccessory, date, password]
         let static3 = StaticDataSource(items: items3)
         
         self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, proxy2, static3])

@@ -59,6 +59,8 @@
 		02FE33F81B5CDEE900D2F5AD /* InputFormOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F71B5CDEE900D2F5AD /* InputFormOptionCell.swift */; };
 		02FE33FA1B5CEDD800D2F5AD /* InputFormDateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */; };
 		02FE33FC1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33FB1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift */; };
+		02FE33FE1B5CF80100D2F5AD /* InputFormAccessoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33FD1B5CF80100D2F5AD /* InputFormAccessoryItem.swift */; };
+		02FE34001B5CF90000D2F5AD /* InputFormAccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE33FF1B5CF90000D2F5AD /* InputFormAccessoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -133,6 +135,8 @@
 		02FE33F71B5CDEE900D2F5AD /* InputFormOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormOptionCell.swift; sourceTree = "<group>"; };
 		02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormDateItem.swift; sourceTree = "<group>"; };
 		02FE33FB1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormDatePickerCell.swift; sourceTree = "<group>"; };
+		02FE33FD1B5CF80100D2F5AD /* InputFormAccessoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormAccessoryItem.swift; sourceTree = "<group>"; };
+		02FE33FF1B5CF90000D2F5AD /* InputFormAccessoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormAccessoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,8 @@
 		02FE33D91B5BF10D00D2F5AD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
+				02FE33FF1B5CF90000D2F5AD /* InputFormAccessoryCell.swift */,
+				02FE33FD1B5CF80100D2F5AD /* InputFormAccessoryItem.swift */,
 				02FE33E41B5BFF6C00D2F5AD /* InputFormBoolItem.swift */,
 				02FE33DC1B5BF2A400D2F5AD /* InputFormData.swift */,
 				02FE33F91B5CEDD800D2F5AD /* InputFormDateItem.swift */,
@@ -380,6 +386,7 @@
 				024943481B57D731009110DE /* UIExtensions.swift in Sources */,
 				028F5F0E1B57C76A0079FBFE /* ExampleTableViewCell.swift in Sources */,
 				02FE33C91B58369C00D2F5AD /* SplitHackViewController.swift in Sources */,
+				02FE34001B5CF90000D2F5AD /* InputFormAccessoryCell.swift in Sources */,
 				02FE33FA1B5CEDD800D2F5AD /* InputFormDateItem.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				02FE33FC1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift in Sources */,
@@ -399,6 +406,7 @@
 				02FE33CB1B5BA0DA00D2F5AD /* ExampleCollectionViewCell.swift in Sources */,
 				02FE33C31B57FD8200D2F5AD /* AutoDiffViewModel.swift in Sources */,
 				022B100E1B2F2FC400DD4DCD /* AppDelegate.swift in Sources */,
+				02FE33FE1B5CF80100D2F5AD /* InputFormAccessoryItem.swift in Sources */,
 				02FE33F81B5CDEE900D2F5AD /* InputFormOptionCell.swift in Sources */,
 				02FE33CD1B5BAC9F00D2F5AD /* ExampleCollectionViewReusableView.swift in Sources */,
 				02FE33D61B5BBEFD00D2F5AD /* CatalogStaticItem.swift in Sources */,

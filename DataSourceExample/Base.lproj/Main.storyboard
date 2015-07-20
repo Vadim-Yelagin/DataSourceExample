@@ -493,6 +493,45 @@
                                     <outlet property="titleLabel" destination="143-lu-vn4" id="kfS-yC-ZdF"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormAccessory" id="fUm-7d-Jti" customClass="InputFormAccessoryCell" customModule="DataSourceExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fUm-7d-Jti" id="nJM-cI-Ltr">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-KU-VF1">
+                                            <rect key="frame" x="8" y="8" width="536" height="27.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="0Wf-lS-TOp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Value" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7Z-8b-X2M">
+                                            <rect key="frame" x="552" y="8" width="40" height="27.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uXj-KU-VF1" secondAttribute="bottom" id="2x8-01-cTt"/>
+                                        <constraint firstItem="uXj-KU-VF1" firstAttribute="leading" secondItem="nJM-cI-Ltr" secondAttribute="leadingMargin" id="5lS-Zz-iBD"/>
+                                        <constraint firstItem="uXj-KU-VF1" firstAttribute="top" secondItem="nJM-cI-Ltr" secondAttribute="topMargin" id="AMM-OH-nin"/>
+                                        <constraint firstItem="U7Z-8b-X2M" firstAttribute="leading" secondItem="uXj-KU-VF1" secondAttribute="trailing" constant="8" id="EfI-5O-LNd"/>
+                                        <constraint firstItem="U7Z-8b-X2M" firstAttribute="top" secondItem="nJM-cI-Ltr" secondAttribute="topMargin" id="aVR-ji-qZg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="U7Z-8b-X2M" secondAttribute="trailing" id="mQg-iF-VGn"/>
+                                        <constraint firstItem="U7Z-8b-X2M" firstAttribute="bottom" secondItem="nJM-cI-Ltr" secondAttribute="bottomMargin" id="vI4-Ba-cHG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="uXj-KU-VF1" id="Btx-OY-yMI"/>
+                                    <outlet property="valueLabel" destination="U7Z-8b-X2M" id="4Fl-Lm-KHv"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormDate" rowHeight="195" id="s09-qY-P0n" customClass="InputFormDatePickerCell" customModule="DataSourceExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
