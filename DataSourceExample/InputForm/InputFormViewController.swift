@@ -58,7 +58,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func showData() {
-        let message = "Full Name: \(data.name.value)\nEmail Address: \(data.email.value)\nSend SPAM: \(data.sendSpam.value)\nZIP Code: \(data.zip.value)\nPassword: \(data.password.value)"
+        let message = "Full Name: \(data.name.value)\nEmail Address: \(data.email.value)\nSend SPAM: \(data.sendSpam.value)\nPeriod: \(data.period.value.title)\nZIP Code: \(data.zip.value)\nPassword: \(data.password.value)"
         let alert = UIAlertController(title: "Data", message: message, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)

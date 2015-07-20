@@ -15,6 +15,17 @@ enum InputFormDataPeriod {
     case Weekly
     case Monthly
     
+    var title: String {
+        switch self {
+        case .Daily:
+            return "Daily"
+        case .Weekly:
+            return "Weekly"
+        case .Monthly:
+            return "Monthly"
+        }
+    }
+    
 }
 
 final class InputFormData {
