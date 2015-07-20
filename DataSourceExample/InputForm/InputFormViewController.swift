@@ -26,16 +26,21 @@ class InputFormViewController: UIViewController {
                 return "DefaultCell"
             }
         }
-        var name = InputFormTextItem(placeholder: "Full Name", property: data.name)
+        var name = InputFormTextItem(title: "Full Name", property: data.name)
         name.autocapitalizationType = .Words
-        var email = InputFormTextItem(placeholder: "Email Address", property: data.email)
+        var email = InputFormTextItem(title: "Email Address", property: data.email)
         email.keyboardType = .EmailAddress
         var sendSpam = InputFormBoolItem(title: "I Want to Receive SPAM", property: data.sendSpam)
-        var zip = InputFormTextItem(placeholder: "ZIP Code", property: data.zip)
+        
+        let daily = InputFormOptionItem(title: "Daily", property: data.period, value: .Daily)
+        let weekly = InputFormOptionItem(title: "Weekly", property: data.period, value: .Weekly)
+        let monthly = InputFormOptionItem(title: "Monthly", property: data.period, value: .Monthly)
+        
+        var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
         zip.keyboardType = .NumberPad
-        var password = InputFormTextItem(placeholder: "Password", property: data.password)
+        var password = InputFormTextItem(title: "Password", property: data.password)
         password.secureTextEntry = true
-        let items: [InputFormItem] = [name, email, sendSpam, zip, password]
+        let items: [InputFormItem] = [name, email, sendSpam, daily, weekly, monthly, zip, password]
         self.tableDataSource.dataSource.innerDataSource.value = StaticDataSource(items: items)
     }
     

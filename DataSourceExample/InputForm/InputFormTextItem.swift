@@ -15,7 +15,7 @@ struct InputFormTextItem: InputFormItem {
         return "InputFormText"
     }
     
-    let placeholder: String
+    let title: String
     let property: MutableProperty<String>
     
     var autocapitalizationType = UITextAutocapitalizationType.None
@@ -23,8 +23,8 @@ struct InputFormTextItem: InputFormItem {
     var keyboardType = UIKeyboardType.Default
     var secureTextEntry = false
     
-    init(placeholder: String, property: MutableProperty<String>) {
-        self.placeholder = placeholder
+    init(title: String, property: MutableProperty<String>) {
+        self.title = title
         self.property = property
     }
     

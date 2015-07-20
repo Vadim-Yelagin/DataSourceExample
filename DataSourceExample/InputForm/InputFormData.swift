@@ -9,6 +9,14 @@
 import Foundation
 import ReactiveCocoa
 
+enum InputFormDataPeriod {
+    
+    case Daily
+    case Weekly
+    case Monthly
+    
+}
+
 final class InputFormData {
     
     let name = MutableProperty("")
@@ -16,5 +24,6 @@ final class InputFormData {
     let sendSpam = MutableProperty(true)
     let zip = MutableProperty("")
     let password = MutableProperty("")
+    let period = MutableProperty(InputFormDataPeriod.Daily)
     
 }

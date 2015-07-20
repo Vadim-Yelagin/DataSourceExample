@@ -25,7 +25,7 @@ class InputFormTextFieldCell: TableViewCell {
     }
     
     func configureWithItem(item: InputFormTextItem) {
-        self.textField?.placeholder = item.placeholder
+        self.textField?.placeholder = item.title
         self.textField?.autocapitalizationType = item.autocapitalizationType
         self.textField?.autocorrectionType = item.autocorrectionType
         self.textField?.keyboardType = item.keyboardType

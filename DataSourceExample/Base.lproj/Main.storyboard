@@ -443,6 +443,32 @@
                                     <outlet property="titleLabel" destination="Q2H-8Y-1LA" id="dip-HM-PfY"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InputFormOption" id="AEe-rt-RUS" customClass="InputFormOptionCell" customModule="DataSourceExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AEe-rt-RUS" id="UxI-9f-OMW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="143-lu-vn4">
+                                            <rect key="frame" x="8" y="12" width="584" height="19.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="143-lu-vn4" firstAttribute="top" secondItem="UxI-9f-OMW" secondAttribute="topMargin" constant="4" id="2G3-tA-o8W"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="143-lu-vn4" secondAttribute="bottom" constant="4" id="kUS-jQ-jXC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="143-lu-vn4" secondAttribute="trailing" id="sMA-dM-Nvy"/>
+                                        <constraint firstItem="143-lu-vn4" firstAttribute="leading" secondItem="UxI-9f-OMW" secondAttribute="leadingMargin" id="uIU-EG-vuj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="143-lu-vn4" id="kfS-yC-ZdF"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                     </tableView>
