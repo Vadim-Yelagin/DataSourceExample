@@ -35,9 +35,9 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         let items1: [InputFormItem] = [name, email, sendSpam]
         let static1 = StaticDataSource(items: items1)
         
-        let daily = InputFormOptionItem(title: "Daily", property: data.period, value: .Daily)
-        let weekly = InputFormOptionItem(title: "Weekly", property: data.period, value: .Weekly)
-        let monthly = InputFormOptionItem(title: "Monthly", property: data.period, value: .Monthly)
+        let daily = InputFormOptionItem(title: "• Daily", property: data.period, value: .Daily)
+        let weekly = InputFormOptionItem(title: "• Weekly", property: data.period, value: .Weekly)
+        let monthly = InputFormOptionItem(title: "• Monthly", property: data.period, value: .Monthly)
         let items2: [InputFormItem] = [daily, weekly, monthly]
         let static2 = StaticDataSource(items: items2)
         let empty2 = EmptyDataSource()
