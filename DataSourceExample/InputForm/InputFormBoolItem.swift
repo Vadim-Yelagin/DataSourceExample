@@ -23,4 +23,6 @@ struct InputFormBoolItem: InputFormItem {
         self.property = property
     }
     
+    func select() {}
+    
 }

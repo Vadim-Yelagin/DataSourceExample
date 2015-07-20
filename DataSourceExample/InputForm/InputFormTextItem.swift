@@ -28,4 +28,6 @@ struct InputFormTextItem: InputFormItem {
         self.property = property
     }
     
+    func select() {}
+    
 }

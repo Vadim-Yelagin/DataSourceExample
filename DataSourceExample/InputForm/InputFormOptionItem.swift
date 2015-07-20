@@ -33,4 +33,8 @@ struct InputFormOptionItem<T: Equatable>: InputFormOptionItemProtocol {
         self.current = property.producer |> map { $0 == value }
     }
     
+    func select() {
+        self.property.value = self.value
+    }
+    
 }

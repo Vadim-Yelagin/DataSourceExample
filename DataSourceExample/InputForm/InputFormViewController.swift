@@ -9,7 +9,7 @@
 import UIKit
 import DataSource
 
-class InputFormViewController: UIViewController {
+class InputFormViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView?
     
@@ -59,6 +59,15 @@ class InputFormViewController: UIViewController {
             tableView.sectionHeaderHeight = UITableViewAutomaticDimension
             tableView.dataSource = self.tableDataSource
             self.tableDataSource.tableView = tableView
+        }
+    }
+    
+    func tableView(tableView: UITableView,
+        didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectAllRows(true)
+        if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? InputFormItem {
+            item.select()
         }
     }
 
