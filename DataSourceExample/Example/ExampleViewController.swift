@@ -85,7 +85,8 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if let _ = self.viewModel?.dataSource.supplementaryItemOfKind(UICollectionElementKindSectionHeader, inSection: section) {
+        if let viewModel = self.viewModel, let _ = viewModel.dataSource.supplementaryItemOfKind(UICollectionElementKindSectionHeader, inSection: section)
+        {
             return CGSizeMake(44, 44)
         } else {
             return CGSizeZero
