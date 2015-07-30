@@ -17,11 +17,11 @@ class ExampleCollectionViewCell: CollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? ExampleItem }
-            |> ignoreNil
-        items |> start(self, ExampleCollectionViewCell.configureWithItem)
-        items |> flatMap(.Latest) { $0.on.producer }
-            |> start(self, ExampleCollectionViewCell.configureWithOn)
+            .map { $0 as? ExampleItem }
+            .ignoreNil()
+        items.start(self, ExampleCollectionViewCell.configureWithItem)
+        items.flatMap(.Latest) { $0.on.producer }
+            .start(self, ExampleCollectionViewCell.configureWithOn)
     }
     
     func configureWithItem(item: ExampleItem) {

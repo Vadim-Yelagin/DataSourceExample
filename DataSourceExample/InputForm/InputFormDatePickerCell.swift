@@ -17,10 +17,10 @@ class InputFormDatePickerCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? InputFormDateItem }
-            |> ignoreNil
-        items |> flatMap(.Latest) { $0.property.producer }
-            |> start(self, InputFormDatePickerCell.configureWithValue)
+            .map { $0 as? InputFormDateItem }
+            .ignoreNil()
+        items.flatMap(.Latest) { $0.property.producer }
+            .start(self, InputFormDatePickerCell.configureWithValue)
     }
     
     func configureWithValue(value: NSDate) {

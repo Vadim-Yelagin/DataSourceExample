@@ -18,11 +18,11 @@ class InputFormSwitchCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? InputFormBoolItem }
-            |> ignoreNil
-        items |> start(self, InputFormSwitchCell.configureWithItem)
-        items |> flatMap(.Latest) { $0.property.producer }
-            |> start(self, InputFormSwitchCell.configureWithValue)
+            .map { $0 as? InputFormBoolItem }
+            .ignoreNil()
+        items.start(self, InputFormSwitchCell.configureWithItem)
+        items.flatMap(.Latest) { $0.property.producer }
+            .start(self, InputFormSwitchCell.configureWithValue)
     }
     
     func configureWithItem(item: InputFormBoolItem) {

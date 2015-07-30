@@ -17,9 +17,9 @@ class ExampleCollectionViewReusableView: CollectionViewReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.item.producer
-            |> map { $0 as? String }
-            |> ignoreNil
-            |> start(self, ExampleCollectionViewReusableView.configureWithItem)
+            .map { $0 as? String }
+            .ignoreNil()
+            .start(self, ExampleCollectionViewReusableView.configureWithItem)
     }
     
     func configureWithItem(item: String) {

@@ -17,11 +17,11 @@ class ExampleTableViewCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? ExampleItem }
-            |> ignoreNil
-        items |> start(self, ExampleTableViewCell.configureWithItem)
-        items |> flatMap(.Latest) { $0.on.producer }
-              |> start(self, ExampleTableViewCell.configureWithOn)
+            .map { $0 as? ExampleItem }
+            .ignoreNil()
+        items.start(self, ExampleTableViewCell.configureWithItem)
+        items.flatMap(.Latest) { $0.on.producer }
+            .start(self, ExampleTableViewCell.configureWithOn)
     }
     
     func configureWithItem(item: ExampleItem) {

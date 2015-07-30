@@ -31,7 +31,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         name.autocapitalizationType = .Words
         var email = InputFormTextItem(title: "Email Address", property: data.email)
         email.keyboardType = .EmailAddress
-        var sendSpam = InputFormBoolItem(title: "I Want to Receive SPAM", property: data.sendSpam)
+        let sendSpam = InputFormBoolItem(title: "I Want to Receive SPAM", property: data.sendSpam)
         let items1: [InputFormItem] = [name, email, sendSpam]
         let static1 = StaticDataSource(items: items1)
         
@@ -42,7 +42,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         let static2 = StaticDataSource(items: items2)
         let empty2 = EmptyDataSource()
         let proxy2 = ProxyDataSource(empty2)
-        proxy2.innerDataSource <~ data.sendSpam.producer |> map {
+        proxy2.innerDataSource <~ data.sendSpam.producer.map {
             (sendSpam: Bool) -> DataSource in
             return sendSpam ? static2 : empty2
         }
@@ -50,13 +50,13 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
         var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
         zip.keyboardType = .NumberPad
         let formattedDate = MutableProperty("")
-        formattedDate <~ data.date.producer |> map {
+        formattedDate <~ data.date.producer.map {
             NSDateFormatter.localizedStringFromDate($0, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         }
         let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
         let date = InputFormDateItem(title: "Date", property: data.date)
         date.expanded <~ dateAccessory.expanded
-        date.expanded.producer |> start(self, InputFormViewController.updateRowHeights)
+        date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
         var password = InputFormTextItem(title: "Password", property: data.password)
         password.secureTextEntry = true
         let items3: [InputFormItem] = [zip, dateAccessory, date, password]

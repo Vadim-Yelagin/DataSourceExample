@@ -17,11 +17,11 @@ class InputFormTextFieldCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? InputFormTextItem }
-            |> ignoreNil
-        items |> start(self, InputFormTextFieldCell.configureWithItem)
-        items |> flatMap(.Latest) { $0.property.producer }
-            |> start(self, InputFormTextFieldCell.configureWithValue)
+            .map { $0 as? InputFormTextItem }
+            .ignoreNil()
+        items.start(self, InputFormTextFieldCell.configureWithItem)
+        items.flatMap(.Latest) { $0.property.producer }
+            .start(self, InputFormTextFieldCell.configureWithValue)
     }
     
     func configureWithItem(item: InputFormTextItem) {
@@ -38,7 +38,7 @@ class InputFormTextFieldCell: TableViewCell {
     
     @IBAction func onEditing(textField: UITextField) {
         if let item = self.item.value as? InputFormTextItem {
-            item.property.value = textField.text
+            item.property.value = textField.text ?? ""
         }
     }
 

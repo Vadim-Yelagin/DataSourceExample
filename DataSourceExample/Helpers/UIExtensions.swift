@@ -12,7 +12,7 @@ import UIKit
 extension UITableView {
     
     func deselectAllRows(animated: Bool) {
-        if let indexPaths = self.indexPathsForSelectedRows() as? [NSIndexPath] {
+        if let indexPaths = self.indexPathsForSelectedRows {
             for indexPath in indexPaths {
                 self.deselectRowAtIndexPath(indexPath, animated: animated)
             }
@@ -24,7 +24,7 @@ extension UITableView {
 extension UICollectionView {
     
     func deselectAllRows(animated: Bool) {
-        if let indexPaths = self.indexPathsForSelectedItems() as? [NSIndexPath] {
+        if let indexPaths = self.indexPathsForSelectedItems() {
             for indexPath in indexPaths {
                 self.deselectItemAtIndexPath(indexPath, animated: animated)
             }

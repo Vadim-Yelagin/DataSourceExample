@@ -9,15 +9,15 @@
 import Foundation
 import ReactiveCocoa
 
-func start<T: AnyObject, V, E>
-    (target: T, method: T -> V -> ())
-    (_ producer: SignalProducer<V, E>)
-    -> Disposable
-{
-    return producer.start(next: {
-        [weak target] value in
-        if let target = target {
-            method(target)(value)
-        }
-    })
+extension SignalProducer {
+
+    func start<O: AnyObject>(target: O, _ method: O -> T -> ()) -> Disposable {
+        return self.start(next: {
+            [weak target] value in
+            if let target = target {
+                method(target)(value)
+            }
+        })
+    }
+
 }

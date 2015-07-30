@@ -30,7 +30,7 @@ struct RandomData {
     static func items(count: Int = 5, value: Int = 1000) -> [ExampleItem] {
         let n = 1 + random(count)
         return (0 ..< n).map { _ in
-            ExampleItem(self.title(value: value))
+            ExampleItem(self.title(value))
         }
     }
 

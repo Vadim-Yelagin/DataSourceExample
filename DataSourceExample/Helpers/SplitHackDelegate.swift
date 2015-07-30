@@ -12,8 +12,8 @@ import UIKit
 final class SplitHackDelegate: NSObject, UISplitViewControllerDelegate {
     
     func splitViewController(splitViewController: UISplitViewController,
-        collapseSecondaryViewController secondaryViewController:UIViewController!,
-        ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool
+        collapseSecondaryViewController secondaryViewController:UIViewController,
+        ontoPrimaryViewController primaryViewController:UIViewController) -> Bool
     {
         if let nc = secondaryViewController as? UINavigationController,
             vc = nc.topViewController as? ExampleViewController

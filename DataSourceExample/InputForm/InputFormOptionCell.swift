@@ -17,11 +17,11 @@ class InputFormOptionCell: TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let items = self.item.producer
-            |> map { $0 as? InputFormOptionItemProtocol }
-            |> ignoreNil
-        items |> start(self, InputFormOptionCell.configureWithItem)
-        items |> flatMap(.Latest) { $0.current }
-            |> start(self, InputFormOptionCell.configureWithValue)
+            .map { $0 as? InputFormOptionItemProtocol }
+            .ignoreNil()
+        items.start(self, InputFormOptionCell.configureWithItem)
+        items.flatMap(.Latest) { $0.current }
+            .start(self, InputFormOptionCell.configureWithValue)
     }
     
     func configureWithItem(item: InputFormOptionItemProtocol) {
