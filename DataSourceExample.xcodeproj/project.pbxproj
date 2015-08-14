@@ -22,6 +22,7 @@
 		024943471B57D731009110DE /* RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943451B57D731009110DE /* RACExtensions.swift */; };
 		024943481B57D731009110DE /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943461B57D731009110DE /* UIExtensions.swift */; };
 		0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943491B57D7D4009110DE /* SplitHackDelegate.swift */; };
+		028602F71B7E257E00474D04 /* AutoDiffSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */; };
 		028F5F031B57C4910079FBFE /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F001B57C4910079FBFE /* CatalogCell.swift */; };
 		028F5F041B57C4910079FBFE /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F011B57C4910079FBFE /* CatalogItem.swift */; };
 		028F5F051B57C4910079FBFE /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F5F021B57C4910079FBFE /* CatalogViewController.swift */; };
@@ -93,6 +94,7 @@
 		024943451B57D731009110DE /* RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACExtensions.swift; sourceTree = "<group>"; };
 		024943461B57D731009110DE /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		024943491B57D7D4009110DE /* SplitHackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackDelegate.swift; sourceTree = "<group>"; };
+		028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffSectionsViewModel.swift; sourceTree = "<group>"; };
 		028F5F001B57C4910079FBFE /* CatalogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		028F5F011B57C4910079FBFE /* CatalogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
 		028F5F021B57C4910079FBFE /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		0249433F1B57CE14009110DE /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */,
 				02FE33C21B57FD8200D2F5AD /* AutoDiffViewModel.swift */,
 				02FE33C41B58008600D2F5AD /* CompositeViewModel.swift */,
 				02FE33CE1B5BBBBF00D2F5AD /* MutableViewModel.swift */,
@@ -377,6 +380,7 @@
 				02FE33D41B5BBE7F00D2F5AD /* EditingViewController.swift in Sources */,
 				02FE33D81B5BC30900D2F5AD /* EditingTableViewDataSource.swift in Sources */,
 				02AB3C511B57E33B00CF5A35 /* ProxyViewModel.swift in Sources */,
+				028602F71B7E257E00474D04 /* AutoDiffSectionsViewModel.swift in Sources */,
 				02FE33DD1B5BF2A400D2F5AD /* InputFormData.swift in Sources */,
 				02FE33CF1B5BBBBF00D2F5AD /* MutableViewModel.swift in Sources */,
 				028F5F101B57C76A0079FBFE /* ExampleViewController.swift in Sources */,

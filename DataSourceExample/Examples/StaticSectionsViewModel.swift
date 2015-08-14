@@ -15,17 +15,17 @@ final class StaticSectionsViewModel: ExampleViewModel {
     let title = "Static (sections)"
     
     let dataSource: DataSource = StaticDataSource(sections: [
-        StaticDataSourceSection(
+        DataSourceSection(
             items: StaticData.randomItems(),
             supplementaryItems: [
                 UICollectionElementKindSectionHeader: "Section one"
             ]),
-        StaticDataSourceSection(
+        DataSourceSection(
             items: StaticData.randomItems(),
             supplementaryItems: [
                 UICollectionElementKindSectionHeader: "Section two"
             ]),
-        StaticDataSourceSection(
+        DataSourceSection(
             items: StaticData.randomItems(),
             supplementaryItems: [
                 UICollectionElementKindSectionHeader: "Section three"
