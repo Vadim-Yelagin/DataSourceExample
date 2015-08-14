@@ -1,4 +1,4 @@
 github "robrix/Box" "1.2.2"
 github "antitypical/Result" "0.4.4"
 github "ReactiveCocoa/ReactiveCocoa" "v3.0-RC.1"
-github "Vadim-Yelagin/DataSource" "0.1.2"
+github "Vadim-Yelagin/DataSource" "2b869904b9157bc7fb6b263401f7ad5a544587e9"

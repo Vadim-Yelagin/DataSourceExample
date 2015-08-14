@@ -34,9 +34,9 @@ struct RandomData {
         }
     }
 
-    static func section() -> StaticDataSourceSection<ExampleItem> {
+    static func section() -> DataSourceSection<ExampleItem> {
         let title = self.title()
-        return StaticDataSourceSection(items: self.items(),
+        return DataSourceSection(items: self.items(),
             supplementaryItems: [UICollectionElementKindSectionHeader: title])
     }
 
