@@ -12,12 +12,12 @@ import ReactiveCocoa
 extension SignalProducer {
 
     func start<O: AnyObject>(target: O, _ method: O -> T -> ()) -> Disposable {
-        return self.start(next: {
+        return self.startWithNext {
             [weak target] value in
             if let target = target {
                 method(target)(value)
             }
-        })
+        }
     }
 
 }

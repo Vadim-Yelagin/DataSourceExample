@@ -1,3 +1,3 @@
-github "antitypical/Result" "0.6-beta.1"
-github "ReactiveCocoa/ReactiveCocoa" "4529365364d9283a243c1632f32a5b875eca982d"
-github "Vadim-Yelagin/DataSource" "19fcc127ea89460682be5b000ffc84f393b506a7"
+github "antitypical/Result" "a9940162d201511f8f13ccb4e2eb57f3a3ca8f89"
+github "ReactiveCocoa/ReactiveCocoa" "19e1e326d08c93970c3f03ea833764d467ccf039"
+github "Vadim-Yelagin/DataSource" "2caaa56f9a5acd19b2130d3faa61a18a7f03167f"
