@@ -11,26 +11,26 @@ import DataSource
 import ReactiveCocoa
 
 class InputFormDatePickerCell: TableViewCell {
-    
-    @IBOutlet var datePicker: UIDatePicker?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let items = self.item.producer
-            .map { $0 as? InputFormDateItem }
-            .ignoreNil()
-        items.flatMap(.Latest) { $0.property.producer }
-            .start(self, InputFormDatePickerCell.configureWithValue)
-    }
-    
-    func configureWithValue(value: NSDate) {
-        self.datePicker?.date = value
-    }
-    
-    @IBAction func onEditing(datePicker: UIDatePicker) {
-        if let item = self.item.value as? InputFormDateItem {
-            item.property.value = datePicker.date
-        }
-    }
+
+	@IBOutlet var datePicker: UIDatePicker?
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		let items = self.item.producer
+			.map { $0 as? InputFormDateItem }
+			.ignoreNil()
+		items.flatMap(.Latest) { $0.property.producer }
+			.start(self, InputFormDatePickerCell.configureWithValue)
+	}
+
+	func configureWithValue(value: NSDate) {
+		self.datePicker?.date = value
+	}
+
+	@IBAction func onEditing(datePicker: UIDatePicker) {
+		if let item = self.item.value as? InputFormDateItem {
+			item.property.value = datePicker.date
+		}
+	}
 
 }

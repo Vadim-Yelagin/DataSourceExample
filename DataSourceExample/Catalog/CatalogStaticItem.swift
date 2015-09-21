@@ -9,7 +9,7 @@
 import Foundation
 
 struct CatalogStaticItem {
-    
-    let reuseIdentifier: String
-    
+
+	let reuseIdentifier: String
+
 }

@@ -11,32 +11,32 @@ import DataSource
 import ReactiveCocoa
 
 class InputFormAccessoryCell: TableViewCell {
-    
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var valueLabel: UILabel?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let items = self.item.producer
-            .map { $0 as? InputFormAccessoryItem }
-            .ignoreNil()
-        items.start(self, InputFormAccessoryCell.configureWithItem)
-        items.flatMap(.Latest) { $0.property.producer }
-            .start(self, InputFormAccessoryCell.configureWithValue)
-        items.flatMap(.Latest) { $0.expanded.producer }
-            .start(self, InputFormAccessoryCell.configureWithExpanded)
-    }
-    
-    func configureWithItem(item: InputFormAccessoryItem) {
-        self.titleLabel?.text = item.title
-    }
-    
-    func configureWithValue(value: String) {
-        self.valueLabel?.text = value
-    }
-    
-    func configureWithExpanded(expanded: Bool) {
-        self.valueLabel?.textColor = expanded ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.blackColor()
-    }
+
+	@IBOutlet var titleLabel: UILabel?
+	@IBOutlet var valueLabel: UILabel?
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		let items = self.item.producer
+			.map { $0 as? InputFormAccessoryItem }
+			.ignoreNil()
+		items.start(self, InputFormAccessoryCell.configureWithItem)
+		items.flatMap(.Latest) { $0.property.producer }
+			.start(self, InputFormAccessoryCell.configureWithValue)
+		items.flatMap(.Latest) { $0.expanded.producer }
+			.start(self, InputFormAccessoryCell.configureWithExpanded)
+	}
+
+	func configureWithItem(item: InputFormAccessoryItem) {
+		self.titleLabel?.text = item.title
+	}
+
+	func configureWithValue(value: String) {
+		self.valueLabel?.text = value
+	}
+
+	func configureWithExpanded(expanded: Bool) {
+		self.valueLabel?.textColor = expanded ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.blackColor()
+	}
 
 }

@@ -10,25 +10,25 @@ import UIKit
 import DataSource
 
 class EditingViewController: UIViewController, UITableViewDelegate {
-    
-    @IBOutlet var tableView: UITableView?
-    
-    let tableDataSource = EditingTableViewDataSource()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let tableView = self.tableView {
-            tableView.estimatedRowHeight = 44
-            tableView.rowHeight = UITableViewAutomaticDimension
-            tableView.sectionHeaderHeight = UITableViewAutomaticDimension
-            tableView.dataSource = self.tableDataSource
-            self.tableDataSource.tableView = tableView
-            tableView.editing = true
-        }
-    }
-    
-    @IBAction func add() {
-        self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: 0)
-    }
+
+	@IBOutlet var tableView: UITableView?
+
+	let tableDataSource = EditingTableViewDataSource()
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		if let tableView = self.tableView {
+			tableView.estimatedRowHeight = 44
+			tableView.rowHeight = UITableViewAutomaticDimension
+			tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+			tableView.dataSource = self.tableDataSource
+			self.tableDataSource.tableView = tableView
+			tableView.editing = true
+		}
+	}
+
+	@IBAction func add() {
+		self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: 0)
+	}
 
 }

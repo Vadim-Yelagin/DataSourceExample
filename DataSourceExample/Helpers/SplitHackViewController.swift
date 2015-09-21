@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class SplitHackViewController: UISplitViewController {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.preferredDisplayMode = .AllVisible
-    }
-    
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		self.preferredDisplayMode = .AllVisible
+	}
+
 }

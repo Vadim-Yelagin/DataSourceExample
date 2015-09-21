@@ -11,8 +11,8 @@ import DataSource
 
 protocol ExampleViewModel {
 
-    var title: String { get }
-    var dataSource: DataSource { get }
-    var actions: [ExampleViewModelAction] { get }
-    
+	var title: String { get }
+	var dataSource: DataSource { get }
+	var actions: [ExampleViewModelAction] { get }
+
 }

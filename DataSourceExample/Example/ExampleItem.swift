@@ -10,12 +10,12 @@ import Foundation
 import ReactiveCocoa
 
 final class ExampleItem {
-    
-    let title: String
-    let on = MutableProperty(false)
-    
-    init(_ title: String) {
-        self.title = title
-    }
-    
+
+	let title: String
+	let on = MutableProperty(false)
+
+	init(_ title: String) {
+		self.title = title
+	}
+
 }

@@ -10,13 +10,13 @@ import Foundation
 import DataSource
 
 final class StaticItemsViewModel: ExampleViewModel {
-    
-    let title = "Static (items)"
-    
-    let dataSource: DataSource = StaticDataSource(items: StaticData.items)
-    
-    var actions: [ExampleViewModelAction] {
-        return []
-    }
-    
+
+	let title = "Static (items)"
+
+	let dataSource: DataSource = StaticDataSource(items: StaticData.items)
+
+	var actions: [ExampleViewModelAction] {
+		return []
+	}
+
 }

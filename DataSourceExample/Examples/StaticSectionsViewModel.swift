@@ -11,29 +11,29 @@ import DataSource
 import UIKit
 
 final class StaticSectionsViewModel: ExampleViewModel {
-    
-    let title = "Static (sections)"
-    
-    let dataSource: DataSource = StaticDataSource(sections: [
-        DataSourceSection(
-            items: StaticData.randomItems(),
-            supplementaryItems: [
-                UICollectionElementKindSectionHeader: "Section one"
-            ]),
-        DataSourceSection(
-            items: StaticData.randomItems(),
-            supplementaryItems: [
-                UICollectionElementKindSectionHeader: "Section two"
-            ]),
-        DataSourceSection(
-            items: StaticData.randomItems(),
-            supplementaryItems: [
-                UICollectionElementKindSectionHeader: "Section three"
-            ])
-        ])
-    
-    var actions: [ExampleViewModelAction] {
-        return []
-    }
-    
+
+	let title = "Static (sections)"
+
+	let dataSource: DataSource = StaticDataSource(sections: [
+		DataSourceSection(
+			items: StaticData.randomItems(),
+			supplementaryItems: [
+				UICollectionElementKindSectionHeader: "Section one"
+			]),
+		DataSourceSection(
+			items: StaticData.randomItems(),
+			supplementaryItems: [
+				UICollectionElementKindSectionHeader: "Section two"
+			]),
+		DataSourceSection(
+			items: StaticData.randomItems(),
+			supplementaryItems: [
+				UICollectionElementKindSectionHeader: "Section three"
+			])
+		])
+
+	var actions: [ExampleViewModelAction] {
+		return []
+	}
+
 }

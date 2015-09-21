@@ -11,19 +11,19 @@ import DataSource
 import ReactiveCocoa
 
 class ExampleCollectionViewReusableView: CollectionViewReusableView {
-    
-    @IBOutlet var titleLabel: UILabel?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.item.producer
-            .map { $0 as? String }
-            .ignoreNil()
-            .start(self, ExampleCollectionViewReusableView.configureWithItem)
-    }
-    
-    func configureWithItem(item: String) {
-        self.titleLabel?.text = item
-    }
+
+	@IBOutlet var titleLabel: UILabel?
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		self.item.producer
+			.map { $0 as? String }
+			.ignoreNil()
+			.start(self, ExampleCollectionViewReusableView.configureWithItem)
+	}
+
+	func configureWithItem(item: String) {
+		self.titleLabel?.text = item
+	}
 
 }

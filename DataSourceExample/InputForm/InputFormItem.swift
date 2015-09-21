@@ -9,9 +9,9 @@
 import Foundation
 
 protocol InputFormItem {
-    
-    var reuseIdentifier: String { get }
-    var title: String { get }
-    func select()
-    
+
+	var reuseIdentifier: String { get }
+	var title: String { get }
+	func select()
+
 }

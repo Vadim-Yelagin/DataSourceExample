@@ -10,19 +10,19 @@ import Foundation
 import ReactiveCocoa
 
 struct InputFormBoolItem: InputFormItem {
-    
-    var reuseIdentifier: String {
-        return "InputFormBool"
-    }
-    
-    let title: String
-    let property: MutableProperty<Bool>
-    
-    init(title: String, property: MutableProperty<Bool>) {
-        self.title = title
-        self.property = property
-    }
-    
-    func select() {}
-    
+
+	var reuseIdentifier: String {
+		return "InputFormBool"
+	}
+
+	let title: String
+	let property: MutableProperty<Bool>
+
+	init(title: String, property: MutableProperty<Bool>) {
+		self.title = title
+		self.property = property
+	}
+
+	func select() {}
+
 }
