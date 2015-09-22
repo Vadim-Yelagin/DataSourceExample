@@ -27,6 +27,12 @@ class EditingViewController: UIViewController, UITableViewDelegate {
 		}
 	}
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.tableView?.beginUpdates()
+		self.tableView?.endUpdates()
+	}
+
 	@IBAction func add() {
 		self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: 0)
 	}
