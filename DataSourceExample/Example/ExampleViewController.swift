@@ -71,16 +71,20 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 	}
 
 	func selectItemAtIndexPath(indexPath: NSIndexPath) {
-		if let item = self.viewModel?.dataSource.itemAtIndexPath(indexPath) as? ExampleItem {
+		if let viewModel = self.viewModel,
+			item = viewModel.dataSource.itemAtIndexPath(indexPath) as? ExampleItem
+		{
 			item.on.value = !item.on.value
 		}
 	}
 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 		self.selectItemAtIndexPath(indexPath)
 	}
 
 	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+		collectionView.deselectItemAtIndexPath(indexPath, animated: true)
 		self.selectItemAtIndexPath(indexPath)
 	}
 
