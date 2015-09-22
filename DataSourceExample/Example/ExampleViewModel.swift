@@ -9,7 +9,7 @@
 import Foundation
 import DataSource
 
-protocol ExampleViewModel {
+protocol ExampleViewModel: AnyObject {
 
 	var title: String { get }
 	var dataSource: DataSource { get }
