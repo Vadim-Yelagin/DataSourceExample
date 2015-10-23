@@ -11,7 +11,7 @@ import ReactiveCocoa
 
 extension SignalProducer {
 
-	func start<O: AnyObject>(target: O, _ method: O -> T -> ()) -> Disposable {
+	func start<O: AnyObject>(target: O, _ method: O -> Value -> ()) -> Disposable {
 		return self.startWithNext {
 			[weak target] value in
 			if let target = target {
