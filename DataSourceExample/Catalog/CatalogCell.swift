@@ -10,15 +10,9 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class CatalogCell: TableViewCell, Disposing {
+class CatalogCell: TableViewCell {
 
 	@IBOutlet var titleLabel: UILabel?
-
-	let disposable = CompositeDisposable()
-
-	deinit {
-		disposable.dispose()
-	}
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

@@ -13,7 +13,6 @@
 		022B101A1B2F2FC400DD4DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B10181B2F2FC400DD4DCD /* LaunchScreen.xib */; };
 		0249433C1B57CBAD009110DE /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249433B1B57CBAD009110DE /* ExampleViewModel.swift */; };
 		024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943401B57CE23009110DE /* StaticItemsViewModel.swift */; };
-		024943471B57D731009110DE /* RACExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943451B57D731009110DE /* RACExtensions.swift */; };
 		024943481B57D731009110DE /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943461B57D731009110DE /* UIExtensions.swift */; };
 		0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943491B57D7D4009110DE /* SplitHackDelegate.swift */; };
 		028602F71B7E257E00474D04 /* AutoDiffSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */; };
@@ -87,7 +86,6 @@
 		022B10191B2F2FC400DD4DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0249433B1B57CBAD009110DE /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		024943401B57CE23009110DE /* StaticItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticItemsViewModel.swift; sourceTree = "<group>"; };
-		024943451B57D731009110DE /* RACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACExtensions.swift; sourceTree = "<group>"; };
 		024943461B57D731009110DE /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		024943491B57D7D4009110DE /* SplitHackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackDelegate.swift; sourceTree = "<group>"; };
 		028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffSectionsViewModel.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 		024943441B57D731009110DE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				024943451B57D731009110DE /* RACExtensions.swift */,
 				02FE33C01B57FC7C00D2F5AD /* RandomData.swift */,
 				024943491B57D7D4009110DE /* SplitHackDelegate.swift */,
 				02FE33C81B58369C00D2F5AD /* SplitHackViewController.swift */,
@@ -390,7 +387,6 @@
 				02FE33FA1B5CEDD800D2F5AD /* InputFormDateItem.swift in Sources */,
 				02FE33C11B57FC7C00D2F5AD /* RandomData.swift in Sources */,
 				02FE33FC1B5CEE4B00D2F5AD /* InputFormDatePickerCell.swift in Sources */,
-				024943471B57D731009110DE /* RACExtensions.swift in Sources */,
 				02FE33E31B5BF3CB00D2F5AD /* InputFormItem.swift in Sources */,
 				02CD36A71B57EEBC0030CE81 /* ExampleViewModelAction.swift in Sources */,
 				02FE33DF1B5BF2D500D2F5AD /* InputFormTextItem.swift in Sources */,

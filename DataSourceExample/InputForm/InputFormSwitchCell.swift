@@ -10,16 +10,10 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormSwitchCell: TableViewCell, Disposing {
+class InputFormSwitchCell: TableViewCell {
 
 	@IBOutlet var titleLabel: UILabel?
 	@IBOutlet var switchControl: UISwitch?
-
-	let disposable = CompositeDisposable()
-
-	deinit {
-		disposable.dispose()
-	}
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

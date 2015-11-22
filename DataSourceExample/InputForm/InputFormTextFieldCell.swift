@@ -10,15 +10,9 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormTextFieldCell: TableViewCell, Disposing {
+class InputFormTextFieldCell: TableViewCell {
 
 	@IBOutlet var textField: UITextField?
-
-	let disposable = CompositeDisposable()
-
-	deinit {
-		disposable.dispose()
-	}
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

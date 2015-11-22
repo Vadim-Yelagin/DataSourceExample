@@ -10,15 +10,9 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class ExampleCollectionViewReusableView: CollectionViewReusableView, Disposing {
+class ExampleCollectionViewReusableView: CollectionViewReusableView {
 
 	@IBOutlet var titleLabel: UILabel?
-
-	let disposable = CompositeDisposable()
-
-	deinit {
-		disposable.dispose()
-	}
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

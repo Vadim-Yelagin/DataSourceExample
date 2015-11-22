@@ -10,15 +10,9 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormDatePickerCell: TableViewCell, Disposing {
+class InputFormDatePickerCell: TableViewCell {
 
 	@IBOutlet var datePicker: UIDatePicker?
-
-	let disposable = CompositeDisposable()
-
-	deinit {
-		disposable.dispose()
-	}
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
