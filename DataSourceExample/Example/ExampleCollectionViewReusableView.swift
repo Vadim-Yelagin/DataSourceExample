@@ -14,9 +14,15 @@ class ExampleCollectionViewReusableView: CollectionViewReusableView {
 
 	@IBOutlet var titleLabel: UILabel?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.item.producer
+		disposable += self.item.producer
 			.map { $0 as? String }
 			.ignoreNil()
 			.start(self, ExampleCollectionViewReusableView.configureWithItem)

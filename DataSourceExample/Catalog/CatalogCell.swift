@@ -14,9 +14,15 @@ class CatalogCell: TableViewCell {
 
 	@IBOutlet var titleLabel: UILabel?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.item.producer
+		disposable += self.item.producer
 			.map { $0 as? CatalogItem }
 			.ignoreNil()
 			.start(self, CatalogCell.configureWithItem)

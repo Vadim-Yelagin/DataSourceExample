@@ -17,6 +17,12 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 	let data = InputFormData()
 	let tableDataSource = TableViewDataSource()
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		self.tableDataSource.reuseIdentifierForItem = {
@@ -42,7 +48,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		let static2 = StaticDataSource(items: items2)
 		let empty2 = EmptyDataSource()
 		let proxy2 = ProxyDataSource(empty2)
-		proxy2.innerDataSource <~ data.sendSpam.producer.map {
+		disposable += proxy2.innerDataSource <~ data.sendSpam.producer.map {
 			(sendSpam: Bool) -> DataSource in
 			return sendSpam ? static2 : empty2
 		}
@@ -50,13 +56,13 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
 		zip.keyboardType = .NumberPad
 		let formattedDate = MutableProperty("")
-		formattedDate <~ data.date.producer.map {
+		disposable += formattedDate <~ data.date.producer.map {
 			NSDateFormatter.localizedStringFromDate($0, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
 		}
 		let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
 		let date = InputFormDateItem(title: "Date", property: data.date)
-		date.expanded <~ dateAccessory.expanded
-		date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
+		disposable += date.expanded <~ dateAccessory.expanded
+		disposable += date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
 		var password = InputFormTextItem(title: "Password", property: data.password)
 		password.secureTextEntry = true
 		let items3: [InputFormItem] = [zip, dateAccessory, date, password]

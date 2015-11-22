@@ -14,13 +14,19 @@ class ExampleCollectionViewCell: CollectionViewCell {
 
 	@IBOutlet var titleLabel: UILabel?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		let items = self.item.producer
 			.map { $0 as? ExampleItem }
 			.ignoreNil()
-		items.start(self, ExampleCollectionViewCell.configureWithItem)
-		items.flatMap(.Latest) { $0.on.producer }
+		disposable += items.start(self, ExampleCollectionViewCell.configureWithItem)
+		disposable += items.flatMap(.Latest) { $0.on.producer }
 			.start(self, ExampleCollectionViewCell.configureWithOn)
 	}
 

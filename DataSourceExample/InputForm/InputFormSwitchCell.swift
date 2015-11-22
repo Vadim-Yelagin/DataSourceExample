@@ -15,13 +15,19 @@ class InputFormSwitchCell: TableViewCell {
 	@IBOutlet var titleLabel: UILabel?
 	@IBOutlet var switchControl: UISwitch?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		let items = self.item.producer
 			.map { $0 as? InputFormBoolItem }
 			.ignoreNil()
-		items.start(self, InputFormSwitchCell.configureWithItem)
-		items.flatMap(.Latest) { $0.property.producer }
+		disposable += items.start(self, InputFormSwitchCell.configureWithItem)
+		disposable += items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormSwitchCell.configureWithValue)
 	}
 

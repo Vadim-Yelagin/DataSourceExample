@@ -15,15 +15,21 @@ class InputFormAccessoryCell: TableViewCell {
 	@IBOutlet var titleLabel: UILabel?
 	@IBOutlet var valueLabel: UILabel?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		let items = self.item.producer
 			.map { $0 as? InputFormAccessoryItem }
 			.ignoreNil()
-		items.start(self, InputFormAccessoryCell.configureWithItem)
-		items.flatMap(.Latest) { $0.property.producer }
+		disposable += items.start(self, InputFormAccessoryCell.configureWithItem)
+		disposable += items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormAccessoryCell.configureWithValue)
-		items.flatMap(.Latest) { $0.expanded.producer }
+		disposable += items.flatMap(.Latest) { $0.expanded.producer }
 			.start(self, InputFormAccessoryCell.configureWithExpanded)
 	}
 

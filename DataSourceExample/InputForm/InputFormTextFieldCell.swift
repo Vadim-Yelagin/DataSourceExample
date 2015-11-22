@@ -14,13 +14,19 @@ class InputFormTextFieldCell: TableViewCell {
 
 	@IBOutlet var textField: UITextField?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		let items = self.item.producer
 			.map { $0 as? InputFormTextItem }
 			.ignoreNil()
-		items.start(self, InputFormTextFieldCell.configureWithItem)
-		items.flatMap(.Latest) { $0.property.producer }
+		disposable += items.start(self, InputFormTextFieldCell.configureWithItem)
+		disposable += items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormTextFieldCell.configureWithValue)
 	}
 

@@ -14,12 +14,18 @@ class InputFormDatePickerCell: TableViewCell {
 
 	@IBOutlet var datePicker: UIDatePicker?
 
+	let disposable = CompositeDisposable()
+
+	deinit {
+		disposable.dispose()
+	}
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		let items = self.item.producer
 			.map { $0 as? InputFormDateItem }
 			.ignoreNil()
-		items.flatMap(.Latest) { $0.property.producer }
+		disposable += items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormDatePickerCell.configureWithValue)
 	}
 
