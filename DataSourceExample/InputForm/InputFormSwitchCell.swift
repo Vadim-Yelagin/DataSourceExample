@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormSwitchCell: TableViewCell {
+class InputFormSwitchCell: TableViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 	@IBOutlet var switchControl: UISwitch?
@@ -26,8 +26,8 @@ class InputFormSwitchCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? InputFormBoolItem }
 			.ignoreNil()
-		disposable += items.start(self, InputFormSwitchCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.property.producer }
+		items.start(self, InputFormSwitchCell.configureWithItem)
+		items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormSwitchCell.configureWithValue)
 	}
 

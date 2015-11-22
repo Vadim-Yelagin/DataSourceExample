@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class ExampleCollectionViewReusableView: CollectionViewReusableView {
+class ExampleCollectionViewReusableView: CollectionViewReusableView, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 
@@ -22,7 +22,7 @@ class ExampleCollectionViewReusableView: CollectionViewReusableView {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		disposable += self.item.producer
+		self.item.producer
 			.map { $0 as? String }
 			.ignoreNil()
 			.start(self, ExampleCollectionViewReusableView.configureWithItem)

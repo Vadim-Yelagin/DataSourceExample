@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormDatePickerCell: TableViewCell {
+class InputFormDatePickerCell: TableViewCell, Disposing {
 
 	@IBOutlet var datePicker: UIDatePicker?
 
@@ -25,7 +25,7 @@ class InputFormDatePickerCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? InputFormDateItem }
 			.ignoreNil()
-		disposable += items.flatMap(.Latest) { $0.property.producer }
+		items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormDatePickerCell.configureWithValue)
 	}
 

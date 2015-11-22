@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class CatalogCell: TableViewCell {
+class CatalogCell: TableViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 
@@ -22,7 +22,7 @@ class CatalogCell: TableViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		disposable += self.item.producer
+		self.item.producer
 			.map { $0 as? CatalogItem }
 			.ignoreNil()
 			.start(self, CatalogCell.configureWithItem)

@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormAccessoryCell: TableViewCell {
+class InputFormAccessoryCell: TableViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 	@IBOutlet var valueLabel: UILabel?
@@ -26,10 +26,10 @@ class InputFormAccessoryCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? InputFormAccessoryItem }
 			.ignoreNil()
-		disposable += items.start(self, InputFormAccessoryCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.property.producer }
+		items.start(self, InputFormAccessoryCell.configureWithItem)
+		items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormAccessoryCell.configureWithValue)
-		disposable += items.flatMap(.Latest) { $0.expanded.producer }
+		items.flatMap(.Latest) { $0.expanded.producer }
 			.start(self, InputFormAccessoryCell.configureWithExpanded)
 	}
 

@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class ExampleTableViewCell: TableViewCell {
+class ExampleTableViewCell: TableViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 
@@ -25,8 +25,8 @@ class ExampleTableViewCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? ExampleItem }
 			.ignoreNil()
-		disposable += items.start(self, ExampleTableViewCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.on.producer }
+		items.start(self, ExampleTableViewCell.configureWithItem)
+		items.flatMap(.Latest) { $0.on.producer }
 			.start(self, ExampleTableViewCell.configureWithOn)
 	}
 

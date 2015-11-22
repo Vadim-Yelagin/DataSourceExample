@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormOptionCell: TableViewCell {
+class InputFormOptionCell: TableViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 
@@ -25,8 +25,8 @@ class InputFormOptionCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? InputFormOptionItemProtocol }
 			.ignoreNil()
-		disposable += items.start(self, InputFormOptionCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.current }
+		items.start(self, InputFormOptionCell.configureWithItem)
+		items.flatMap(.Latest) { $0.current }
 			.start(self, InputFormOptionCell.configureWithValue)
 	}
 

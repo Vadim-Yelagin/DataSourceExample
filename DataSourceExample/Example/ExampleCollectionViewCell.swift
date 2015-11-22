@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class ExampleCollectionViewCell: CollectionViewCell {
+class ExampleCollectionViewCell: CollectionViewCell, Disposing {
 
 	@IBOutlet var titleLabel: UILabel?
 
@@ -25,8 +25,8 @@ class ExampleCollectionViewCell: CollectionViewCell {
 		let items = self.item.producer
 			.map { $0 as? ExampleItem }
 			.ignoreNil()
-		disposable += items.start(self, ExampleCollectionViewCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.on.producer }
+		items.start(self, ExampleCollectionViewCell.configureWithItem)
+		items.flatMap(.Latest) { $0.on.producer }
 			.start(self, ExampleCollectionViewCell.configureWithOn)
 	}
 

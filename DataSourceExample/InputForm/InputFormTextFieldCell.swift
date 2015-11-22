@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormTextFieldCell: TableViewCell {
+class InputFormTextFieldCell: TableViewCell, Disposing {
 
 	@IBOutlet var textField: UITextField?
 
@@ -25,8 +25,8 @@ class InputFormTextFieldCell: TableViewCell {
 		let items = self.item.producer
 			.map { $0 as? InputFormTextItem }
 			.ignoreNil()
-		disposable += items.start(self, InputFormTextFieldCell.configureWithItem)
-		disposable += items.flatMap(.Latest) { $0.property.producer }
+		items.start(self, InputFormTextFieldCell.configureWithItem)
+		items.flatMap(.Latest) { $0.property.producer }
 			.start(self, InputFormTextFieldCell.configureWithValue)
 	}
 

@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 import ReactiveCocoa
 
-class InputFormViewController: UIViewController, UITableViewDelegate {
+class InputFormViewController: UIViewController, UITableViewDelegate, Disposing {
 
 	@IBOutlet var tableView: UITableView?
 
@@ -62,7 +62,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
 		let date = InputFormDateItem(title: "Date", property: data.date)
 		disposable += date.expanded <~ dateAccessory.expanded
-		disposable += date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
+		date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
 		var password = InputFormTextItem(title: "Password", property: data.password)
 		password.secureTextEntry = true
 		let items3: [InputFormItem] = [zip, dateAccessory, date, password]
