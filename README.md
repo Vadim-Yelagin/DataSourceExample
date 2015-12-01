@@ -9,7 +9,7 @@ Warning: make sure you understand the basics of [ReactiveCocoa](https://github.c
 ## Requirements
 
 * Xcode 7
-* [Carthage 0.9.1](https://github.com/Carthage/Carthage/releases/tag/0.9.1)
+* [Carthage](https://github.com/Carthage/Carthage/releases/)
 
 ## Installation
 
