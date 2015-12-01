@@ -4,7 +4,7 @@ Example project for [DataSource](https://github.com/Vadim-Yelagin/DataSource) li
 
 Features a catalog of included `DataSource` protocol implementations together with an example of `UITableView` editing and a DataSource-based input form.
 
-Warning: make sure you understand the basics of [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa/tree/v4.0-alpha.1) before investigating the code!
+Warning: make sure you understand the basics of [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa/) before investigating the code!
 
 ## Requirements
 
