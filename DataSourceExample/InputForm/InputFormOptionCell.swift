@@ -16,7 +16,7 @@ class InputFormOptionCell: TableViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		let items = self.item.producer
+		let items = self.cellModel.producer
 			.map { $0 as? InputFormOptionItemProtocol }
 			.ignoreNil()
 		items.start(self, InputFormOptionCell.configureWithItem)

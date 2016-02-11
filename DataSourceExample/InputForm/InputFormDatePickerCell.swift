@@ -16,7 +16,7 @@ class InputFormDatePickerCell: TableViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		let items = self.item.producer
+		let items = self.cellModel.producer
 			.map { $0 as? InputFormDateItem }
 			.ignoreNil()
 		items.flatMap(.Latest) { $0.property.producer }
@@ -28,7 +28,7 @@ class InputFormDatePickerCell: TableViewCell {
 	}
 
 	@IBAction func onEditing(datePicker: UIDatePicker) {
-		if let item = self.item.value as? InputFormDateItem {
+		if let item = self.cellModel.value as? InputFormDateItem {
 			item.property.value = datePicker.date
 		}
 	}

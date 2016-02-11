@@ -17,7 +17,7 @@ class InputFormSwitchCell: TableViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		let items = self.item.producer
+		let items = self.cellModel.producer
 			.map { $0 as? InputFormBoolItem }
 			.ignoreNil()
 		items.start(self, InputFormSwitchCell.configureWithItem)
@@ -34,8 +34,8 @@ class InputFormSwitchCell: TableViewCell {
 	}
 
 	@IBAction func onEditing(switchControl: UISwitch) {
-		if let item = self.item.value as? InputFormBoolItem {
-			item.property.value = switchControl.on
+		if let cellModel = self.cellModel.value as? InputFormBoolItem {
+			cellModel.property.value = switchControl.on
 		}
 	}
 

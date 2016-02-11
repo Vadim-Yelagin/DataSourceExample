@@ -17,7 +17,7 @@ class InputFormAccessoryCell: TableViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		let items = self.item.producer
+		let items = self.cellModel.producer
 			.map { $0 as? InputFormAccessoryItem }
 			.ignoreNil()
 		items.start(self, InputFormAccessoryCell.configureWithItem)

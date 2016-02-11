@@ -59,10 +59,10 @@ class CatalogViewController: UIViewController {
 		if let nc = segue.destinationViewController as? UINavigationController,
 			vc = nc.topViewController as? ExampleViewController,
 			cell = sender as? CatalogCell,
-			item = cell.item.value as? CatalogItem
+			cellModel = cell.cellModel.value as? CatalogItem
 			where segue.identifier == "ShowExampleSegue"
 		{
-			vc.viewModel = item.viewModel()
+			vc.viewModel = cellModel.viewModel()
 		}
 	}
 

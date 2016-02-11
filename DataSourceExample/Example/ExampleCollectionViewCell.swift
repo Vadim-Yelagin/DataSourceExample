@@ -16,7 +16,7 @@ class ExampleCollectionViewCell: CollectionViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		let items = self.item.producer
+		let items = self.cellModel.producer
 			.map { $0 as? ExampleItem }
 			.ignoreNil()
 		items.start(self, ExampleCollectionViewCell.configureWithItem)
