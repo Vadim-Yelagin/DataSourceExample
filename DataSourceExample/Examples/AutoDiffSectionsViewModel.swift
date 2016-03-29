@@ -24,7 +24,7 @@ final class AutoDiffSectionsViewModel: ExampleViewModel {
 		}]
 	}()
 
-	let autoDiffDataSource = AutoDiffSectionsDataSouce(
+	let autoDiffDataSource = AutoDiffSectionsDataSource(
 		sections: randomSections(),
 		findItemMoves: true,
 		compareSections: {

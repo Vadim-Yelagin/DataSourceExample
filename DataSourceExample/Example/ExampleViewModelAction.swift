@@ -20,7 +20,7 @@ import UIKit
 	}
 
 	func barButtonItem() -> UIBarButtonItem {
-		return UIBarButtonItem(title: self.title, style: .Plain, target: self, action: "doPerform")
+		return UIBarButtonItem(title: self.title, style: .Plain, target: self, action: #selector(ExampleViewModelAction.doPerform))
 	}
 
 	@objc func doPerform() {
