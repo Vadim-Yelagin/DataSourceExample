@@ -8,11 +8,11 @@ Warning: make sure you understand the basics of [ReactiveCocoa](https://github.c
 
 ## Requirements
 
-* Xcode 7.1
+* Xcode 8.1
 
 ## Installation
 
 1. `git clone --recursive https://github.com/Vadim-Yelagin/DataSourceExample.git`
 2. `cd DataSourceExample`
-3. Open DataSourceExample.xcworkspace in Xcode 7.1
+3. Open DataSourceExample.xcworkspace in Xcode 8.1
 4. Build and run
