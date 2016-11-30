@@ -13,7 +13,7 @@ struct CatalogItem {
 	let title: String
 	let viewModel: () -> ExampleViewModel
 
-	init(title: String, viewModel:() -> ExampleViewModel) {
+	init(title: String, viewModel: @escaping () -> ExampleViewModel) {
 		self.title = title
 		self.viewModel = viewModel
 	}

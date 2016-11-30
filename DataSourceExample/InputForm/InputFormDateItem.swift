@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ReactiveCocoa
+import ReactiveSwift
 
 struct InputFormDateItem: InputFormItem {
 
@@ -16,10 +16,10 @@ struct InputFormDateItem: InputFormItem {
 	}
 
 	let title: String
-	let property: MutableProperty<NSDate>
+	let property: MutableProperty<Date>
 	let expanded = MutableProperty(false)
 
-	init(title: String, property: MutableProperty<NSDate>) {
+	init(title: String, property: MutableProperty<Date>) {
 		self.title = title
 		self.property = property
 	}

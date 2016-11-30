@@ -50,17 +50,17 @@ class CatalogViewController: UIViewController {
 		}
 	}
 
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.tableView?.deselectAllRows(animated)
 	}
 
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if let nc = segue.destinationViewController as? UINavigationController,
-			vc = nc.topViewController as? ExampleViewController,
-			cell = sender as? CatalogCell,
-			cellModel = cell.cellModel.value as? CatalogItem
-			where segue.identifier == "ShowExampleSegue"
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let nc = segue.destination as? UINavigationController,
+			let vc = nc.topViewController as? ExampleViewController,
+			let cell = sender as? CatalogCell,
+			let cellModel = cell.cellModel.value as? CatalogItem,
+			segue.identifier == "ShowExampleSegue"
 		{
 			vc.viewModel = cellModel.viewModel()
 		}

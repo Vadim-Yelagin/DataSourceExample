@@ -9,6 +9,7 @@
 import Foundation
 import DataSource
 import ReactiveCocoa
+import UIKit
 
 final class CompositeViewModel: ExampleViewModel {
 

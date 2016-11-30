@@ -8,28 +8,26 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class InputFormOptionCell: TableViewCell {
 
-	@IBOutlet var titleLabel: UILabel?
+	@IBOutlet var titleLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+
 		let items = self.cellModel.producer
 			.map { $0 as? InputFormOptionItemProtocol }
-			.ignoreNil()
-		items.start(self, InputFormOptionCell.configureWithItem)
-		items.flatMap(.Latest) { $0.current }
-			.start(self, InputFormOptionCell.configureWithValue)
-	}
+			.skipNil()
 
-	func configureWithItem(item: InputFormOptionItemProtocol) {
-		self.titleLabel?.text = item.title
-	}
+		self.titleLabel.reactive.text <~ items
+			.map { $0.title }
 
-	func configureWithValue(value: Bool) {
-		self.accessoryType = value ? .Checkmark : .None
+		self.reactive.accessoryType <~ items
+			.flatMapLatest { $0.current }
+			.map { $0 ? .checkmark : .none }
 	}
 
 }

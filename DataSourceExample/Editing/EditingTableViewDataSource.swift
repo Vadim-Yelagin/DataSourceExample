@@ -18,26 +18,26 @@ class EditingTableViewDataSource: TableViewDataSource {
 		self.dataSource.innerDataSource.value = self.mutableDataSource
 	}
 
-	func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+	func tableView(_ tableView: UITableView, canEditRowAtIndexPath indexPath: IndexPath) -> Bool {
 		return true
 	}
 
-	func tableView(tableView: UITableView,
+	func tableView(_ tableView: UITableView,
 		commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-		forRowAtIndexPath indexPath: NSIndexPath)
+		forRowAtIndexPath indexPath: IndexPath)
 	{
-		self.mutableDataSource.deleteItemAtIndex(indexPath.row)
+		self.mutableDataSource.deleteItem(at: indexPath.row)
 	}
 
-	func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+	func tableView(_ tableView: UITableView, canMoveRowAtIndexPath indexPath: IndexPath) -> Bool {
 		return true
 	}
 
-	func tableView(tableView: UITableView,
-		moveRowAtIndexPath sourceIndexPath: NSIndexPath,
-		toIndexPath destinationIndexPath: NSIndexPath)
+	func tableView(_ tableView: UITableView,
+		moveRowAtIndexPath sourceIndexPath: IndexPath,
+		toIndexPath destinationIndexPath: IndexPath)
 	{
-		self.mutableDataSource.moveItemAtIndex(index: sourceIndexPath.row, toIndex: destinationIndexPath.row)
+		self.mutableDataSource.moveItem(at: sourceIndexPath.row, to: destinationIndexPath.row)
 	}
 
 }

@@ -8,13 +8,15 @@
 
 import Foundation
 import UIKit
+import ReactiveSwift
+import Result
 
 extension UITableView {
 
-	func deselectAllRows(animated: Bool) {
+	func deselectAllRows(_ animated: Bool) {
 		if let indexPaths = self.indexPathsForSelectedRows {
 			for indexPath in indexPaths {
-				self.deselectRowAtIndexPath(indexPath, animated: animated)
+				self.deselectRow(at: indexPath, animated: animated)
 			}
 		}
 	}
@@ -23,12 +25,37 @@ extension UITableView {
 
 extension UICollectionView {
 
-	func deselectAllRows(animated: Bool) {
-		if let indexPaths = self.indexPathsForSelectedItems() {
+	func deselectAllRows(_ animated: Bool) {
+		if let indexPaths = self.indexPathsForSelectedItems {
 			for indexPath in indexPaths {
-				self.deselectItemAtIndexPath(indexPath, animated: animated)
+				self.deselectItem(at: indexPath, animated: animated)
 			}
 		}
 	}
 
+}
+
+public extension SignalProducerProtocol where Error == NoError {
+
+	public func flatMapLatest<U>(_ transform: @escaping (Value) -> SignalProducer<U, NoError>) -> SignalProducer<U, NoError> {
+		return flatMap(.latest, transform: transform)
+	}
+
+}
+
+extension Reactive where Base: NSObject {
+	public func target<U>(action: @escaping (Base, U) -> Void) -> BindingTarget<U> {
+		return BindingTarget(on: ImmediateScheduler(), lifetime: lifetime) {
+			[weak base = self.base] value in
+			if let base = base {
+				action(base, value)
+			}
+		}
+	}
+}
+
+extension Reactive where Base: UITableViewCell {
+	public var accessoryType: BindingTarget<UITableViewCellAccessoryType> {
+		return target { $0.accessoryType = $1 }
+	}
 }

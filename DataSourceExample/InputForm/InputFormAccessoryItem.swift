@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ReactiveCocoa
+import ReactiveSwift
 
 struct InputFormAccessoryItem: InputFormItem {
 

@@ -8,35 +8,30 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class InputFormAccessoryCell: TableViewCell {
 
-	@IBOutlet var titleLabel: UILabel?
-	@IBOutlet var valueLabel: UILabel?
+	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var valueLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+		
 		let items = self.cellModel.producer
 			.map { $0 as? InputFormAccessoryItem }
-			.ignoreNil()
-		items.start(self, InputFormAccessoryCell.configureWithItem)
-		items.flatMap(.Latest) { $0.property.producer }
-			.start(self, InputFormAccessoryCell.configureWithValue)
-		items.flatMap(.Latest) { $0.expanded.producer }
-			.start(self, InputFormAccessoryCell.configureWithExpanded)
-	}
+			.skipNil()
 
-	func configureWithItem(item: InputFormAccessoryItem) {
-		self.titleLabel?.text = item.title
-	}
+		self.titleLabel.reactive.text <~ items
+			.map { $0.title }
 
-	func configureWithValue(value: String) {
-		self.valueLabel?.text = value
-	}
+		self.valueLabel.reactive.text <~ items
+			.flatMapLatest { $0.property.producer }
 
-	func configureWithExpanded(expanded: Bool) {
-		self.valueLabel?.textColor = expanded ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.blackColor()
+		self.valueLabel.reactive.textColor <~ items
+			.flatMapLatest { $0.expanded.producer }
+			.map { $0 ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.black }
 	}
 
 }

@@ -8,41 +8,40 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class ExampleCollectionViewCell: CollectionViewCell {
 
-	@IBOutlet var titleLabel: UILabel?
+	@IBOutlet var titleLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+
 		let items = self.cellModel.producer
 			.map { $0 as? ExampleItem }
-			.ignoreNil()
-		items.start(self, ExampleCollectionViewCell.configureWithItem)
-		items.flatMap(.Latest) { $0.on.producer }
-			.start(self, ExampleCollectionViewCell.configureWithOn)
-	}
+			.skipNil()
 
-	func configureWithItem(item: ExampleItem) {
-		self.titleLabel?.text = item.title
-	}
+		self.titleLabel.reactive.text <~ items
+			.map { $0.title }
 
-	func configureWithOn(on: Bool) {
-		self.titleLabel?.textColor = on ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.blackColor()
+		self.titleLabel.reactive.textColor <~ items
+			.flatMapLatest { $0.on.producer }
+			.map { $0 ? UIColor(red: 0.75, green: 0, blue: 0, alpha: 1) : UIColor.black }
 	}
 
 	func updateBackground() {
-		self.backgroundColor = self.highlighted || self.selected ? .lightGrayColor() : .groupTableViewBackgroundColor()
+		self.backgroundColor = (self.isHighlighted || self.isSelected)
+			? .lightGray : .groupTableViewBackground
 	}
 
-	override var selected: Bool {
+	override var isSelected: Bool {
 		didSet {
 			self.updateBackground()
 		}
 	}
 
-	override var highlighted: Bool {
+	override var isHighlighted: Bool {
 		didSet {
 			self.updateBackground()
 		}

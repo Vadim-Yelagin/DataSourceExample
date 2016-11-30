@@ -12,15 +12,15 @@ import UIKit
 @objc class ExampleViewModelAction: NSObject {
 
 	let title: String
-	let perform: Void -> Void
+	let perform: (Void) -> Void
 
-	init(title: String, perform: Void -> Void) {
+	init(title: String, perform: @escaping (Void) -> Void) {
 		self.title = title
 		self.perform = perform
 	}
 
 	func barButtonItem() -> UIBarButtonItem {
-		return UIBarButtonItem(title: self.title, style: .Plain, target: self, action: #selector(ExampleViewModelAction.doPerform))
+		return UIBarButtonItem(title: self.title, style: .plain, target: self, action: #selector(ExampleViewModelAction.doPerform))
 	}
 
 	@objc func doPerform() {

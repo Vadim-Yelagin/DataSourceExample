@@ -35,14 +35,14 @@ final class MutableViewModel: ExampleViewModel {
 	func randomInsert() {
 		let n = mutableDataSource.items.value.count
 		let i = random(n + 1)
-		self.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: i)
+		self.mutableDataSource.insertItem(StaticData.randomItem(), at: i)
 	}
 
 	func randomDelete() {
 		let n = mutableDataSource.items.value.count
 		if n >= 1 {
 			let i = random(n)
-			self.mutableDataSource.deleteItemAtIndex(i)
+			self.mutableDataSource.deleteItem(at: i)
 		}
 	}
 
@@ -52,7 +52,7 @@ final class MutableViewModel: ExampleViewModel {
 			let i = random(n)
 			let j0 = random(n - 1)
 			let j = (j0 < i) ? j0 : (j0 + 1)
-			self.mutableDataSource.moveItemAtIndex(index: i, toIndex: j)
+			self.mutableDataSource.moveItem(at: i, to: j)
 		}
 	}
 
@@ -60,7 +60,7 @@ final class MutableViewModel: ExampleViewModel {
 		let n = mutableDataSource.items.value.count
 		if n >= 1 {
 			let i = random(n)
-			self.mutableDataSource.replaceItemAtIndex(i, withItem: StaticData.randomItem())
+			self.mutableDataSource.replaceItem(at: i, with: StaticData.randomItem())
 		}
 	}
 

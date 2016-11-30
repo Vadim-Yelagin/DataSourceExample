@@ -13,7 +13,7 @@ class SplitHackViewController: UISplitViewController {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.preferredDisplayMode = .AllVisible
+		self.preferredDisplayMode = .allVisible
 	}
 
 }

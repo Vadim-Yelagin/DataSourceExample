@@ -8,35 +8,35 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class InputFormTextFieldCell: TableViewCell {
 
-	@IBOutlet var textField: UITextField?
+	@IBOutlet var textField: UITextField!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+
 		let items = self.cellModel.producer
 			.map { $0 as? InputFormTextItem }
-			.ignoreNil()
-		items.start(self, InputFormTextFieldCell.configureWithItem)
-		items.flatMap(.Latest) { $0.property.producer }
-			.start(self, InputFormTextFieldCell.configureWithValue)
+			.skipNil()
+
+		self.reactive.target { $0.configure(item: $1) } <~ items
+
+		self.textField.reactive.text <~ items
+			.flatMapLatest { $0.property.producer }
 	}
 
-	func configureWithItem(item: InputFormTextItem) {
+	func configure(item: InputFormTextItem) {
 		self.textField?.placeholder = item.title
 		self.textField?.autocapitalizationType = item.autocapitalizationType
 		self.textField?.autocorrectionType = item.autocorrectionType
 		self.textField?.keyboardType = item.keyboardType
-		self.textField?.secureTextEntry = item.secureTextEntry
+		self.textField?.isSecureTextEntry = item.secureTextEntry
 	}
 
-	func configureWithValue(value: String) {
-		self.textField?.text = value
-	}
-
-	@IBAction func onEditing(textField: UITextField) {
+	@IBAction func onEditing(_ textField: UITextField) {
 		if let item = self.cellModel.value as? InputFormTextItem {
 			item.property.value = textField.text ?? ""
 		}

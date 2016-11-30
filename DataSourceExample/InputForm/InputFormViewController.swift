@@ -8,9 +8,10 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
-class InputFormViewController: UIViewController, UITableViewDelegate, Disposing {
+class InputFormViewController: UIViewController, UITableViewDelegate {
 
 	@IBOutlet var tableView: UITableView?
 
@@ -34,16 +35,16 @@ class InputFormViewController: UIViewController, UITableViewDelegate, Disposing 
 			}
 		}
 		var name = InputFormTextItem(title: "Full Name", property: data.name)
-		name.autocapitalizationType = .Words
+		name.autocapitalizationType = .words
 		var email = InputFormTextItem(title: "Email Address", property: data.email)
-		email.keyboardType = .EmailAddress
+		email.keyboardType = .emailAddress
 		let sendSpam = InputFormBoolItem(title: "I Want to Receive SPAM", property: data.sendSpam)
 		let items1: [InputFormItem] = [name, email, sendSpam]
 		let static1 = StaticDataSource(items: items1)
 
-		let daily = InputFormOptionItem(title: "• Daily", property: data.period, value: .Daily)
-		let weekly = InputFormOptionItem(title: "• Weekly", property: data.period, value: .Weekly)
-		let monthly = InputFormOptionItem(title: "• Monthly", property: data.period, value: .Monthly)
+		let daily = InputFormOptionItem(title: "• Daily", property: data.period, value: .daily)
+		let weekly = InputFormOptionItem(title: "• Weekly", property: data.period, value: .weekly)
+		let monthly = InputFormOptionItem(title: "• Monthly", property: data.period, value: .monthly)
 		let items2: [InputFormItem] = [daily, weekly, monthly]
 		let static2 = StaticDataSource(items: items2)
 		let empty2 = EmptyDataSource()
@@ -54,15 +55,16 @@ class InputFormViewController: UIViewController, UITableViewDelegate, Disposing 
 		}
 
 		var zip = InputFormTextItem(title: "ZIP Code", property: data.zip)
-		zip.keyboardType = .NumberPad
+		zip.keyboardType = .numberPad
 		let formattedDate = MutableProperty("")
 		disposable += formattedDate <~ data.date.producer.map {
-			NSDateFormatter.localizedStringFromDate($0, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+			DateFormatter.localizedString(from: $0, dateStyle: .short, timeStyle: .short)
 		}
 		let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
 		let date = InputFormDateItem(title: "Date", property: data.date)
 		disposable += date.expanded <~ dateAccessory.expanded
-		date.expanded.producer.start(self, InputFormViewController.updateRowHeights)
+		self.reactive.target { $0.0.updateRowHeights() } <~ date.expanded.producer
+
 		var password = InputFormTextItem(title: "Password", property: data.password)
 		password.secureTextEntry = true
 		let items3: [InputFormItem] = [zip, dateAccessory, date, password]
@@ -71,17 +73,17 @@ class InputFormViewController: UIViewController, UITableViewDelegate, Disposing 
 		self.tableDataSource.dataSource.innerDataSource.value = CompositeDataSource([static1, proxy2, static3])
 	}
 
-	func updateRowHeights(dummy: Bool) {
+	func updateRowHeights() {
 		self.tableView?.beginUpdates()
 		self.tableView?.endUpdates()
 	}
 
 	@IBAction func showData() {
-		let date = NSDateFormatter.localizedStringFromDate(data.date.value, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+		let date = DateFormatter.localizedString(from: data.date.value, dateStyle: .short, timeStyle: .short)
 		let message = "Full Name: \(data.name.value)\nEmail Address: \(data.email.value)\nSend SPAM: \(data.sendSpam.value)\nPeriod: \(data.period.value.title)\nZIP Code: \(data.zip.value)\nDate: \(date)\nPassword: \(data.password.value)"
-		let alert = UIAlertController(title: "Data", message: message, preferredStyle: .Alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-		self.presentViewController(alert, animated: true, completion: nil)
+		let alert = UIAlertController(title: "Data", message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+		self.present(alert, animated: true, completion: nil)
 	}
 
 	override func viewDidLoad() {
@@ -95,17 +97,17 @@ class InputFormViewController: UIViewController, UITableViewDelegate, Disposing 
 		}
 	}
 
-	func tableView(tableView: UITableView,
-		didSelectRowAtIndexPath indexPath: NSIndexPath)
+	func tableView(_ tableView: UITableView,
+		didSelectRowAt indexPath: IndexPath)
 	{
 		tableView.deselectAllRows(true)
-		if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? InputFormItem {
+		if let item = self.tableDataSource.dataSource.item(at: indexPath) as? InputFormItem {
 			item.select()
 		}
 	}
 
-	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-		if let item = self.tableDataSource.dataSource.itemAtIndexPath(indexPath) as? InputFormDateItem where !item.expanded.value {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if let item = self.tableDataSource.dataSource.item(at: indexPath) as? InputFormDateItem, !item.expanded.value {
 			return 0
 		}
 		return UITableViewAutomaticDimension

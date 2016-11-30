@@ -8,28 +8,26 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class ExampleTableViewCell: TableViewCell {
 
-	@IBOutlet var titleLabel: UILabel?
+	@IBOutlet var titleLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+
 		let items = self.cellModel.producer
 			.map { $0 as? ExampleItem }
-			.ignoreNil()
-		items.start(self, ExampleTableViewCell.configureWithItem)
-		items.flatMap(.Latest) { $0.on.producer }
-			.start(self, ExampleTableViewCell.configureWithOn)
-	}
+			.skipNil()
 
-	func configureWithItem(item: ExampleItem) {
-		self.titleLabel?.text = item.title
-	}
+		self.titleLabel.reactive.text <~ items
+			.map { $0.title }
 
-	func configureWithOn(on: Bool) {
-		self.accessoryType = on ? .Checkmark : .None
+		self.reactive.accessoryType <~ items
+			.flatMap(.latest) { $0.on.producer }
+			.map { $0 ? .checkmark : .none }
 	}
 
 }

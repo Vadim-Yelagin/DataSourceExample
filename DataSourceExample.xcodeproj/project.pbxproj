@@ -15,6 +15,8 @@
 		024943411B57CE23009110DE /* StaticItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943401B57CE23009110DE /* StaticItemsViewModel.swift */; };
 		024943481B57D731009110DE /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943461B57D731009110DE /* UIExtensions.swift */; };
 		0249434A1B57D7D4009110DE /* SplitHackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024943491B57D7D4009110DE /* SplitHackDelegate.swift */; };
+		027BAC211DEF253500F97ACC /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027BAC1D1DEF251F00F97ACC /* ReactiveSwift.framework */; };
+		027BAC221DEF253500F97ACC /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 027BAC1D1DEF251F00F97ACC /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		028602F71B7E257E00474D04 /* AutoDiffSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */; };
 		0286CFA61BE27E4600F76C86 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0286CFA51BE27E4600F76C86 /* Result.framework */; };
 		0286CFA81BE27E4F00F76C86 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0286CFA71BE27E4F00F76C86 /* ReactiveCocoa.framework */; };
@@ -71,6 +73,7 @@
 				0286CFBA1BE2815000F76C86 /* Result.framework in Embed Frameworks */,
 				0286CFB61BE2815000F76C86 /* DataSource.framework in Embed Frameworks */,
 				0286CFB81BE2815000F76C86 /* ReactiveCocoa.framework in Embed Frameworks */,
+				027BAC221DEF253500F97ACC /* ReactiveSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +91,7 @@
 		024943401B57CE23009110DE /* StaticItemsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticItemsViewModel.swift; sourceTree = "<group>"; };
 		024943461B57D731009110DE /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		024943491B57D7D4009110DE /* SplitHackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitHackDelegate.swift; sourceTree = "<group>"; };
+		027BAC1D1DEF251F00F97ACC /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		028602F61B7E257E00474D04 /* AutoDiffSectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDiffSectionsViewModel.swift; sourceTree = "<group>"; };
 		0286CFA51BE27E4600F76C86 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0286CFA71BE27E4F00F76C86 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0286CFA61BE27E4600F76C86 /* Result.framework in Frameworks */,
+				027BAC211DEF253500F97ACC /* ReactiveSwift.framework in Frameworks */,
 				0286CFA81BE27E4F00F76C86 /* ReactiveCocoa.framework in Frameworks */,
 				0286CFAA1BE27E5500F76C86 /* DataSource.framework in Frameworks */,
 			);
@@ -222,6 +227,7 @@
 		028F5EF81B57BDC30079FBFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				027BAC1D1DEF251F00F97ACC /* ReactiveSwift.framework */,
 				0286CFA91BE27E5500F76C86 /* DataSource.framework */,
 				0286CFA71BE27E4F00F76C86 /* ReactiveCocoa.framework */,
 				0286CFA51BE27E4600F76C86 /* Result.framework */,
@@ -327,11 +333,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Fueled;
 				TargetAttributes = {
 					022B10071B2F2FC400DD4DCD = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -452,8 +459,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -498,8 +507,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -518,6 +529,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -531,6 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fueled.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -542,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fueled.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

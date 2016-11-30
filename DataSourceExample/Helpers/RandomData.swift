@@ -10,24 +10,24 @@ import Foundation
 import DataSource
 import UIKit
 
-func random(x: Int) -> Int {
+func random(_ x: Int) -> Int {
 	return Int(arc4random_uniform(UInt32(x)))
 }
 
 struct RandomData {
 
-	static func spell(number: Int) -> String {
-		let nf = NSNumberFormatter()
-		nf.numberStyle = .SpellOutStyle
-		nf.formattingContext = .Standalone
-		return nf.stringFromNumber(NSNumber(integer: number))!
+	static func spell(_ number: Int) -> String {
+		let nf = NumberFormatter()
+		nf.numberStyle = .spellOut
+		nf.formattingContext = .standalone
+		return nf.string(from: NSNumber(value: number as Int))!
 	}
 
-	static func title(value: Int = 1000) -> String {
+	static func title(_ value: Int = 1000) -> String {
 		return self.spell(random(value))
 	}
 
-	static func items(count: Int = 5, value: Int = 1000) -> [ExampleItem] {
+	static func items(_ count: Int = 5, value: Int = 1000) -> [ExampleItem] {
 		let n = 1 + random(count)
 		return (0 ..< n).map { _ in
 			ExampleItem(self.title(value))

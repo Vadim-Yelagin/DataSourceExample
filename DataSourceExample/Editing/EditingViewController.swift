@@ -23,18 +23,18 @@ class EditingViewController: UIViewController, UITableViewDelegate {
 			tableView.sectionHeaderHeight = UITableViewAutomaticDimension
 			tableView.dataSource = self.tableDataSource
 			self.tableDataSource.tableView = tableView
-			tableView.editing = true
+			tableView.isEditing = true
 		}
 	}
 
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.tableView?.beginUpdates()
 		self.tableView?.endUpdates()
 	}
 
 	@IBAction func add() {
-		self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), atIndex: 0)
+		self.tableDataSource.mutableDataSource.insertItem(StaticData.randomItem(), at: 0)
 	}
 
 }

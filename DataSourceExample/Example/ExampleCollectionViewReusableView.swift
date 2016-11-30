@@ -8,22 +8,21 @@
 
 import UIKit
 import DataSource
+import ReactiveSwift
 import ReactiveCocoa
 
 class ExampleCollectionViewReusableView: CollectionViewReusableView {
 
-	@IBOutlet var titleLabel: UILabel?
+	@IBOutlet var titleLabel: UILabel!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.viewModel.producer
-			.map { $0 as? String }
-			.ignoreNil()
-			.start(self, ExampleCollectionViewReusableView.configureWithItem)
-	}
 
-	func configureWithItem(item: String) {
-		self.titleLabel?.text = item
+		let items = self.viewModel.producer
+			.map { $0 as? String }
+			.skipNil()
+
+		self.titleLabel.reactive.text <~ items
 	}
 
 }

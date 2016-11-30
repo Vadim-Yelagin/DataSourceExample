@@ -7,21 +7,21 @@
 //
 
 import Foundation
-import ReactiveCocoa
+import ReactiveSwift
 
 enum InputFormDataPeriod {
 
-	case Daily
-	case Weekly
-	case Monthly
+	case daily
+	case weekly
+	case monthly
 
 	var title: String {
 		switch self {
-		case .Daily:
+		case .daily:
 			return "Daily"
-		case .Weekly:
+		case .weekly:
 			return "Weekly"
-		case .Monthly:
+		case .monthly:
 			return "Monthly"
 		}
 	}
@@ -35,7 +35,7 @@ final class InputFormData {
 	let sendSpam = MutableProperty(true)
 	let zip = MutableProperty("")
 	let password = MutableProperty("")
-	let period = MutableProperty(InputFormDataPeriod.Daily)
-	let date = MutableProperty(NSDate())
+	let period = MutableProperty(InputFormDataPeriod.daily)
+	let date = MutableProperty(Date())
 
 }

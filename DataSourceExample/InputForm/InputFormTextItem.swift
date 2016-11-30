@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Fueled. All rights reserved.
 //
 
+import UIKit
 import Foundation
-import ReactiveCocoa
+import ReactiveSwift
 
 struct InputFormTextItem: InputFormItem {
 
@@ -18,9 +19,9 @@ struct InputFormTextItem: InputFormItem {
 	let title: String
 	let property: MutableProperty<String>
 
-	var autocapitalizationType = UITextAutocapitalizationType.None
-	var autocorrectionType = UITextAutocorrectionType.No
-	var keyboardType = UIKeyboardType.Default
+	var autocapitalizationType = UITextAutocapitalizationType.none
+	var autocorrectionType = UITextAutocorrectionType.no
+	var keyboardType = UIKeyboardType.default
 	var secureTextEntry = false
 
 	init(title: String, property: MutableProperty<String>) {

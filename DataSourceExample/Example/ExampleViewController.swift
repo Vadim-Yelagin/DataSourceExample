@@ -10,7 +10,7 @@ import UIKit
 import DataSource
 
 private func space() -> UIBarButtonItem {
-	return UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+	return UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 }
 
 class ExampleViewController: UIViewController, UITableViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -36,12 +36,12 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 
 	@IBAction func toggleView() {
 		if let tableView = self.tableView,
-			collectionView = self.collectionView
+			let collectionView = self.collectionView
 		{
-			UIView.animateWithDuration(0.35) {
+			UIView.animate(withDuration: 0.35, animations: {
 				tableView.alpha = 1 - tableView.alpha
 				collectionView.alpha = 1 - collectionView.alpha
-			}
+			}) 
 		}
 	}
 
@@ -63,32 +63,32 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		if let tableView = self.tableView,
-			collectionView = self.collectionView
+			let collectionView = self.collectionView
 		{
 			collectionView.scrollIndicatorInsets = tableView.scrollIndicatorInsets
 			collectionView.contentInset = tableView.contentInset
 		}
 	}
 
-	func selectItemAtIndexPath(indexPath: NSIndexPath) {
+	func selectItemAtIndexPath(_ indexPath: IndexPath) {
 		if let viewModel = self.viewModel,
-			item = viewModel.dataSource.itemAtIndexPath(indexPath) as? ExampleItem
+			let item = viewModel.dataSource.item(at: indexPath) as? ExampleItem
 		{
 			item.on.value = !item.on.value
 		}
 	}
 
-	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
 		self.selectItemAtIndexPath(indexPath)
 	}
 
-	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-		collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		collectionView.deselectItem(at: indexPath, animated: true)
 		self.selectItemAtIndexPath(indexPath)
 	}
 
-	func collectionView(collectionView: UICollectionView,
+	func collectionView(_ collectionView: UICollectionView,
 		layout collectionViewLayout: UICollectionViewLayout,
 		referenceSizeForHeaderInSection section: Int)
 		-> CGSize
@@ -98,9 +98,9 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 				UICollectionElementKindSectionHeader,
 				inSection: section)
 		{
-			return CGSizeMake(44, 44)
+			return CGSize(width: 44, height: 44)
 		} else {
-			return CGSizeZero
+			return CGSize.zero
 		}
 	}
 	
