@@ -35,10 +35,10 @@ extension UICollectionView {
 
 }
 
-public extension SignalProducerProtocol where Error == NoError {
+public extension SignalProducer where Error == NoError {
 
 	public func flatMapLatest<U>(_ transform: @escaping (Value) -> SignalProducer<U, NoError>) -> SignalProducer<U, NoError> {
-		return flatMap(.latest, transform: transform)
+		return flatMap(.latest, transform)
 	}
 
 }
