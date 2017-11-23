@@ -63,7 +63,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		let dateAccessory = InputFormAccessoryItem(title: "Date", property: formattedDate)
 		let date = InputFormDateItem(title: "Date", property: data.date)
 		disposable += date.expanded <~ dateAccessory.expanded
-		self.reactive.target { $0.0.updateRowHeights() } <~ date.expanded.producer
+		self.reactive.target { this, _ in this.updateRowHeights() } <~ date.expanded.producer
 
 		var password = InputFormTextItem(title: "Password", property: data.password)
 		password.secureTextEntry = true

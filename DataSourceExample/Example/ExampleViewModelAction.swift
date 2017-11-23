@@ -12,9 +12,9 @@ import UIKit
 @objc class ExampleViewModelAction: NSObject {
 
 	let title: String
-	let perform: (Void) -> Void
+    let perform: () -> Void
 
-	init(title: String, perform: @escaping (Void) -> Void) {
+    init(title: String, perform: @escaping () -> Void) {
 		self.title = title
 		self.perform = perform
 	}
