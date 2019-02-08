@@ -90,8 +90,8 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		super.viewDidLoad()
 		if let tableView = self.tableView {
 			tableView.estimatedRowHeight = 44
-			tableView.rowHeight = UITableViewAutomaticDimension
-			tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+			tableView.rowHeight = UITableView.automaticDimension
+			tableView.sectionHeaderHeight = UITableView.automaticDimension
 			tableView.dataSource = self.tableDataSource
 			self.tableDataSource.tableView = tableView
 		}
@@ -110,7 +110,7 @@ class InputFormViewController: UIViewController, UITableViewDelegate {
 		if let item = self.tableDataSource.dataSource.item(at: indexPath) as? InputFormDateItem, !item.expanded.value {
 			return 0
 		}
-		return UITableViewAutomaticDimension
+		return UITableView.automaticDimension
 	}
 
 }

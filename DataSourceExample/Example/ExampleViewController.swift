@@ -49,8 +49,8 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 		super.viewDidLoad()
 		if let tableView = self.tableView {
 			tableView.estimatedRowHeight = 44
-			tableView.rowHeight = UITableViewAutomaticDimension
-			tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+			tableView.rowHeight = UITableView.automaticDimension
+			tableView.sectionHeaderHeight = UITableView.automaticDimension
 			tableView.dataSource = self.tableDataSource
 			self.tableDataSource.tableView = tableView
 		}
@@ -95,7 +95,7 @@ class ExampleViewController: UIViewController, UITableViewDelegate, UICollection
 	{
 		if let viewModel = self.viewModel,
 			let _ = viewModel.dataSource.supplementaryItemOfKind(
-				UICollectionElementKindSectionHeader,
+				UICollectionView.elementKindSectionHeader,
 				inSection: section)
 		{
 			return CGSize(width: 44, height: 44)

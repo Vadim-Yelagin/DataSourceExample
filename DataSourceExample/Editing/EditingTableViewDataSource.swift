@@ -23,7 +23,7 @@ class EditingTableViewDataSource: TableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView,
-		commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+		commitEditingStyle editingStyle: UITableViewCell.EditingStyle,
 		forRowAtIndexPath indexPath: IndexPath)
 	{
 		self.mutableDataSource.deleteItem(at: indexPath.row)

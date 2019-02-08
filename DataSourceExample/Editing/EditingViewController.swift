@@ -19,8 +19,8 @@ class EditingViewController: UIViewController, UITableViewDelegate {
 		super.viewDidLoad()
 		if let tableView = self.tableView {
 			tableView.estimatedRowHeight = 44
-			tableView.rowHeight = UITableViewAutomaticDimension
-			tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+			tableView.rowHeight = UITableView.automaticDimension
+			tableView.sectionHeaderHeight = UITableView.automaticDimension
 			tableView.dataSource = self.tableDataSource
 			self.tableDataSource.tableView = tableView
 			tableView.isEditing = true

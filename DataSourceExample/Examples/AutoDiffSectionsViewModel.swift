@@ -29,8 +29,8 @@ final class AutoDiffSectionsViewModel: ExampleViewModel {
 		sections: randomSections(),
 		findItemMoves: true,
 		compareSections: {
-			let header0 = $0.supplementaryItems[UICollectionElementKindSectionHeader] as! String
-			let header1 = $1.supplementaryItems[UICollectionElementKindSectionHeader] as! String
+			let header0 = $0.supplementaryItems[UICollectionView.elementKindSectionHeader] as! String
+			let header1 = $1.supplementaryItems[UICollectionView.elementKindSectionHeader] as! String
 			return header0 == header1
 		},
 		compareItems: { $0 === $1 })
@@ -49,7 +49,7 @@ private func randomSections() -> [DataSourceSection<ExampleItem>] {
 		}
 		let header = "Section \(RandomData.spell(i))"
 		let items = StaticData.randomItems()
-		sections.append(DataSourceSection(items: items, supplementaryItems: [UICollectionElementKindSectionHeader: header]))
+		sections.append(DataSourceSection(items: items, supplementaryItems: [UICollectionView.elementKindSectionHeader: header]))
 	}
 	return sections
 }

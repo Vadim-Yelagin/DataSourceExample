@@ -28,11 +28,11 @@ final class CompositeViewModel: ExampleViewModel {
 	}()
 
 	let autoDiff1 = AutoDiffDataSource(StaticData.randomItems(),
-		supplementaryItems: [UICollectionElementKindSectionHeader: "First Auto Diff"])
+		supplementaryItems: [UICollectionView.elementKindSectionHeader: "First Auto Diff"])
 		{ $0.title == $1.title }
 
 	let autoDiff2 = AutoDiffDataSource(StaticData.randomItems(),
-		supplementaryItems: [UICollectionElementKindSectionHeader: "Second Auto Diff"])
+		supplementaryItems: [UICollectionView.elementKindSectionHeader: "Second Auto Diff"])
 		{ $0.title == $1.title }
 
 	func random1() {

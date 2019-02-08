@@ -55,7 +55,7 @@ extension Reactive where Base: NSObject {
 }
 
 extension Reactive where Base: UITableViewCell {
-	public var accessoryType: BindingTarget<UITableViewCellAccessoryType> {
+	public var accessoryType: BindingTarget<UITableViewCell.AccessoryType> {
 		return target { $0.accessoryType = $1 }
 	}
 }

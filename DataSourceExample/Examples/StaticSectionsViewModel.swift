@@ -18,17 +18,17 @@ final class StaticSectionsViewModel: ExampleViewModel {
 		DataSourceSection(
 			items: StaticData.randomItems(),
 			supplementaryItems: [
-				UICollectionElementKindSectionHeader: "Section one"
+				UICollectionView.elementKindSectionHeader: "Section one"
 			]),
 		DataSourceSection(
 			items: StaticData.randomItems(),
 			supplementaryItems: [
-				UICollectionElementKindSectionHeader: "Section two"
+				UICollectionView.elementKindSectionHeader: "Section two"
 			]),
 		DataSourceSection(
 			items: StaticData.randomItems(),
 			supplementaryItems: [
-				UICollectionElementKindSectionHeader: "Section three"
+				UICollectionView.elementKindSectionHeader: "Section three"
 			])
 		])
 
