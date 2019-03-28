@@ -8,7 +8,7 @@ Warning: make sure you understand the basics of [ReactiveCocoa](https://github.c
 
 ## Requirements
 
-* Xcode 8.3+
+* Xcode 10.2+
 
 ## Installation
 
